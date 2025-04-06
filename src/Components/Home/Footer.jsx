@@ -1,4 +1,4 @@
-import logo from "../../assets/footerlogo.png";
+import logo from "../../assets/footer-logo.png";
 import { FaFacebook } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
@@ -7,10 +7,12 @@ import google from "../../assets/googleplay.png";
 import leftCircle from "../../assets/circleleft.png";
 import circleright from "../../assets/circleright.png";
 import PricingPlan from "./Choose";
-import footer from "../../assets/footerHome.png";
+import footer from "../../assets/showFooter.png";
 import { NavLink, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   const handleNavigateToSection = (sectionId) => {
@@ -18,8 +20,12 @@ const Footer = () => {
   };
   return (
     <footer
-      className="relative py-8 bg-cover bg-center"
-      style={{ backgroundImage: `url(${footer})` }}
+      className="relative py-32 bg-no-repeat bg-cover bg-top-right"
+      style={{
+        backgroundImage: `url(${footer})`,
+        backgroundPosition: "top right",
+        backgroundSize: "cover",
+      }}
     >
       {/* <div className=" ">
         <div className="absolute top-[-30%] left-[-7%] z-10 ">
@@ -29,29 +35,39 @@ const Footer = () => {
           <img src={circleright} alt="" />
         </div>
       </div> */}
-      <div className="container mx-auto px-6 lg:px-20">
-        <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-8 items-center">
+      <div className="container mx-auto px-6 lg:px-20 pt-48">
+        <div className="mb-20">
+          <h1 className="font-bold text-[30px] text-center  kumbh-sans text-[#FFFFFF]">
+            {t("footer.title")}
+          </h1>
+          <div className="mt-9 flex justify-center ">
+            <button className="py-4 px-6 bg-[#CBB702] text-white kumbh-sans font-normal uppercase rounded-full">
+              {t("footer.getStarted")}
+            </button>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-12  justify-items-center">
           {/* Logo Section */}
           <div className="space-y-3">
-            <img src={logo} alt="WayLearn AI" className="h-[108.97px]" />
-            <p className="poppins font-normal  text-base leading-[22px] text-[#FFFFFF] mt-12">
-              WayLearn AI - Smarter Learning, <br /> Faster Results!
+            <img src={logo} alt="Youmina" className="h-[108.97px]" />
+            <p className="kumbh-sans font-normal  text-base leading-[26px] text-[#FFFFFF] mt-16 text-center">
+              {t("footer.aiEducation")}
             </p>
           </div>
 
           {/* Company Section */}
           <div>
             <h3 className="text-xl font-semibold montserrat text-white ">
-              Company
+              {t("footer.quickLinks")}
             </h3>
             <ul className="mt-3 space-y-4 text-sm">
               <li>
                 <NavLink
                   className="hover:underline text-[#e4e4e4] montserrat leading-auto text-base"
-                  to="/about"
+                  to="/"
                 >
                   {" "}
-                  About Us
+                  {t("footer.home")}
                 </NavLink>
               </li>
               <li>
@@ -59,7 +75,7 @@ const Footer = () => {
                   onClick={() => handleNavigateToSection("how work")}
                   className="hover:underline text-[#e4e4e4] montserrat leading-auto text-base"
                 >
-                  How to work?
+                  {t("footer.features")}
                 </a>
               </li>
               <li>
@@ -67,7 +83,15 @@ const Footer = () => {
                   onClick={() => handleNavigateToSection("choose")}
                   className="hover:underline text-[#e4e4e4] montserrat leading-auto text-base"
                 >
-                  Choose Your Plan
+                  {t("footer.pricing")}
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => handleNavigateToSection("choose")}
+                  className="hover:underline text-[#e4e4e4] montserrat leading-auto text-base"
+                >
+                  {t("footer.contact")}
                 </a>
               </li>
             </ul>
@@ -76,41 +100,33 @@ const Footer = () => {
           {/* Support Section */}
           <div>
             <h3 className="text-xl font-semibold montserrat text-white ">
-              Support
+              {t("footer.policy")}
             </h3>
             <ul className="mt-3 space-y-4 text-sm">
               <li>
                 <NavLink
                   className="hover:underline text-[#e4e4e4] montserrat leading-auto text-base"
-                  to="/resources"
+                  to="/privacy"
                 >
                   {" "}
-                  Resources
+                  {t("footer.privacy")}
                 </NavLink>
               </li>
               <li>
                 <NavLink
                   className="hover:underline text-[#e4e4e4] montserrat leading-auto text-base"
-                  to="/contactus"
+                  to="/terms"
                 >
                   {" "}
-                  Contact Us
+                  {t("footer.terms")}
                 </NavLink>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:underline text-[#e4e4e4] montserrat leading-auto text-base"
-                >
-                  Help Center
-                </a>
               </li>
             </ul>
           </div>
           {/* Social Media & Store Links */}
           <div>
             <h3 className="text-xl font-semibold montserrat text-white ">
-              Connect with us
+              {t("footer.socialMedia")}
             </h3>
             <div className="flex items-center gap-6 mt-6">
               <div>
@@ -135,9 +151,9 @@ const Footer = () => {
         </div>
 
         {/* Copyright Text */}
-        <div className="mt-6 text-center text-sm border-t border-white/20 pt-4 text-white">
+        {/* <div className="mt-6 text-center text-sm border-t border-white/20 pt-4 text-white">
           WayLearn Ai All Rights Reserved, 2025
-        </div>
+        </div> */}
       </div>
     </footer>
   );

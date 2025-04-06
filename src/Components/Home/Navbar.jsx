@@ -2,17 +2,20 @@ import { useEffect, useState } from "react";
 import logo from "../../assets/logo.webp";
 import { TbWorld } from "react-icons/tb";
 import { NavLink, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false); // Modal State
-
+  const [open, setOpen] = useState(false);
+  const { t, i18n } = useTranslation();
+  console.log(t);
   const menuItems = [
-    { name: "Home", id: "home" },
-    { name: "About", id: "about" },
-    { name: "Resources", id: "Resources" },
-    { name: "Contact us", id: "Contact us" },
+    { name: t("navbar.home"), id: "home" },
+    { name: t("navbar.about"), id: "about" },
+    { name: t("navbar.resources"), id: "Resources" },
+    { name: t("navbar.contact"), id: "Contact us" },
   ];
 
   useEffect(() => {
@@ -83,21 +86,53 @@ const Navbar = () => {
           </ul>
 
           {/*  Right: Log In & Sign Up (Large Screen) */}
-          <div className="hidden lg:flex items-center gap-6">
-            <div className="text-[#4D4D4D] text-2xl">
-              <TbWorld />
+          <div className="hidden lg:flex flex-row items-center gap-10">
+            <div className="relative inline-block text-left">
+              <button
+                onClick={() => setOpen(!open)}
+                className="flex items-center gap-1 text-black"
+              >
+                <TbWorld /> {t("navbar.language")}{" "}
+                <span className="text-sm">▼</span>
+              </button>
+
+              {open && (
+                <div className="absolute right-0 mt-2 w-32 bg-white text-black rounded-md shadow-lg z-10">
+                  <ul className="flex flex-col">
+                    <li
+                      onClick={() => i18n.changeLanguage("en")}
+                      className="hover:bg-blue-100 px-4 py-2 cursor-pointer"
+                    >
+                      English
+                    </li>
+                    <li
+                      onClick={() => i18n.changeLanguage("am")}
+                      className="hover:bg-blue-100 px-4 py-2 cursor-pointer"
+                    >
+                      Amharic
+                    </li>
+                    <li
+                      onClick={() => i18n.changeLanguage("om")}
+                      className="hover:bg-blue-100 px-4 py-2 cursor-pointer"
+                    >
+                      Oromo
+                    </li>
+                  </ul>
+                </div>
+              )}
             </div>
+
             <NavLink
               to="/login"
-              className=" montserrat   md:text-base px-5 py-2.5 text-sm font-medium text-[#000000] "
+              className="montserrat md:text-base px-5 py-2.5 text-sm font-medium text-[#000000]"
             >
-              Log in
+              {t("navbar.login")}
             </NavLink>
             <NavLink
               to="/signUp"
-              className="montserrat md:text-base rounded-3xl bg-[#317828]  px-3 py-2  sm:px-5 sm:py-2.5 text-sm font-medium text-[#FFE500]"
+              className="montserrat md:text-base rounded-3xl bg-[#317828] px-3 py-2 sm:px-5 sm:py-2.5 text-sm font-medium text-[#FFE500]"
             >
-              Sign up
+              {t("navbar.signup")}
             </NavLink>
           </div>
 

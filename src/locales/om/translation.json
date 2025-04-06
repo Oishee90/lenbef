@@ -1,0 +1,76 @@
+{
+    "navbar": {
+      "home": "Mana",
+      "about": "Waa'ee keenya",
+      "resources": "Qabeenyaa",
+      "contact": "Nu qunnamu",
+      "login": "Seeni",
+      "signup": "Galmaa’i",
+      "language": "Afaan"
+    },
+    "banner": {
+        "title": "Barnoota gara fuulduraatti si qopheessu",
+        "description": "Kaayyoon keenya barnoota ammayyaa fi mijataa kan rakkoo addunyaa dhugaa furuuf si qopheessu kennuudha. Ofitti amanamummaan baradhu, kaayyoo qabaadhu guddadhu, gara fuulduraatti gara garaa jijjiiruuf qophaa’i",
+        "signup": "Amma Galmaa’i"
+      },
+"milestones": {
+  "schools": "Mana Barumsaa",
+  "teachers": "Barsiisota Kabajamoo",
+  "students": "Barattoota Gammachuu",
+  "schoolsNumber": "195",
+  "teachersNumber": "1 Miliyoona",
+  "studentsNumber": "17 Miliyoona"
+},
+"about": {
+    "title": "Waliigala Nuuf",
+    "subtitle": "Yomima tajaajila gorsaa hojii caalu gara addunyaa guutuu tajaajilaa kennaa jira.",
+    "paragraph1": "Yomima Teeknooloojii Furmaataa bu'uura AI irraa fayyadamuun namootaaf meeshaa cimaa fi sirrii ta'e kennuuf gargaara. Meeshaan kun teeknooloojii AI ammayyaa'aa irratti hundaa'e, barruulee gorsa barbaachisummaa fi ga'umsa qabaatu haala salphaan fi saffisaan uumuuf danda'a. Meeshaan Gorsa AI’n hojiiwwan garaagaraaf fayyadamuuf ni tajaajila, akka barruulee blogii, waajjira webii, deeggarsa barnootaa fi kkf.",
+    "paragraph2": "Yomima Teeknooloojii Furmaataa bu'uura AI irraa fayyadamuun namootaaf meeshaa cimaa fi sirrii ta'e kennuuf gargaara. Meeshaan kun teeknooloojii AI ammayyaa'aa irratti hundaa'e, barruulee gorsa barbaachisummaa fi ga'umsa qabaatu haala salphaan fi saffisaan uumuuf danda'a. Meeshaan Gorsa AI’n hojiiwwan garaagaraaf fayyadamuuf ni tajaajila, akka barruulee blogii, waajjira webii, deeggarsa barnootaa fi kkf.",
+    "paragraph3": "Waa'ee Meeshaa Gorsa AI keenya haaraa maxxansuu keenya ni gammachuun ibsina. Meeshaan keenya kun hojiiwwan addaddaa fi garaagaraaf barruulee haaraa fi salphaa uumuuf gargaara. Meeshaan Gorsa AI’n teeknooloojii AI irratti hundaa’e, barruulee gorsa ga’umsa qabu saffisaan uumuuf ni tajaajila.",
+    "paragraph4": "Keessumaa, Meeshaan Gorsa AI keenya tajaajila barreessaa keessatti sirna sirrii kan si'ataa fi barreessaa ofii keetiin gulaaluuf qabiyyee addaan hojiirra oolchuu dandeessisu qaba.",
+    "paragraph5": "Meeshaa Gorsa AI keenya hojii yeroo ammaa barreessaa fi ga'umsa qaban uumuuf barbaaddaa? Isin wajjin hojjechuu fi Meeshaa Gorsa AI'tti fayyadamuun akka bu'aalee ciccimoo fi gorsa fooyya’aa argattu gammachuun abdii qabna.",
+    "joinNow": "Amma Hirmaadhu" 
+
+  },
+  "feature": {
+  "title": "Amaloota",
+  "subtitle": "Amaloota gara garaa keessanitti bu'aa olaanaa kennuuf hojjachaa jirra.",
+  "paragraph1": "Appii keenya kan dropshipping sadarkaa ol’aanaa qabu gara marsariitii e-commerce keessanii irratti fe’uun, daldaltoota Ameerikaa, gurguddoota AliExpress, fi amaloota addaa qaban irraa fayyadamuu dandeessu. Osoo namoota si beekuuf mijatoo ta’anitti sirrii ta’an gurgurtu jalqabi. Nyaata/inventorii walitti si qabsiifna, ati immoo daldalaa bu’aa qabuu ijaarruu irratti xiyyeeffachuu ni dandeessa.",
+  "paragraph2": "Appii keenya kan dropshipping sadarkaa ol’aanaa qabu gara marsariitii e-commerce keessanii irratti fe’uun, daldaltoota Ameerikaa, gurguddoota AliExpress, fi amaloota addaa qaban irraa fayyadamuu dandeessu. Osoo namoota si beekuuf mijatoo ta’anitti sirrii ta’an gurgurtu jalqabi. Nyaata/inventorii walitti si qabsiifna, ati immoo daldalaa bu’aa qabuu ijaarruu irratti xiyyeeffachuu ni dandeessa."
+},"faq": {
+  "title": "Gaaffilee Waliigalaa Gaafataman",
+  "description": "Deebii ariifachiisaa gaaffilee yeroo baay’ee gaafataman irratti argadhaa – akkasumas waa'ee tajaajiloota fi amaloota keenya baradhaa. Gargaarsa dabalataa barbaaddaa? Yeroo kamiyyuu nu quunnamaa!",
+  "questions": [
+    {
+      "question": "Tartiiba kaffaltii galmee irratti qorannoo bilisaa jiraa?",
+      "answer": "Eeyyee, tajaajiloonni kaffaltii galmee irratti hundaa’an heddu qorannoo bilisaa ni kennu. Kunis fayyadamtoonni tajaajila sana ilaalanii dura kaffaltii gochuu danda’u."
+    },
+    {
+      "question": "Tartiiba galmee kiyya yeroo kamiyyuu haquu nan danda'aa?",
+      "answer": "Eeyyee, tartiiba galmee kee yeroo kamiyyuu keessaa account setting irraa haquu dandeessa."
+    },
+    {
+      "question": "Tajaajila deeggarsa maamilaa ni kennitu?",
+      "answer": "Eeyyen! Gareen keenya sa’aatii 24 keessaa sa'aatii 7 siif tajaajila kenna – ergaa email fi chat fayyadamuun nu quunnamaa."
+    }
+  ]
+},
+"footer": {
+  "title": "Maaltu isin eeggachaa jira?",
+  "getStarted": "Eegalu",
+  "quickLinks": "Tuqaalee Gaggabaaboo",
+  "home": "Fuula Jalqabaa",
+  "features": "Amaloota",
+  "pricing": "Gatiin",
+  "contact": "Nu qunnamu",
+  "policy": "Heera",
+  "privacy": "Icciiti",
+  "terms": "Shirkii fi Haala",
+  "socialMedia": "Miidiyaa Hawaasaa",
+  "aiEducation": "Barattootaaf Sirna Barnoota Humna AIn Deggarame"
+}
+
+
+
+
+  }

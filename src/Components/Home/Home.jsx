@@ -7,6 +7,10 @@ import StayConnected from "./StayConnected";
 import Choose from "./Choose";
 import Grow from "./Grow";
 import Footer from "./Footer";
+import Feature from "./Feature";
+import Frequantly from "./Frequantly";
+import PricingPlan from "./PricingPlan";
+import ContactForm from "./ContactForm";
 
 const Home = () => {
   return (
@@ -15,17 +19,23 @@ const Home = () => {
         <Navbar></Navbar>
         <Banner></Banner>
         <Milestones></Milestones>
-        {/* 
+        <About></About>
+        <PricingPlan></PricingPlan>
+        <Feature></Feature>
+        <ContactForm></ContactForm>
+        {/*         
         <StayConnected></StayConnected>
         <About></About>
-        <Communication></Communication>
-        <Choose></Choose>
-        <div className="!z-50">
+        <Communication></Communication> */}
+        {/* <Choose></Choose> */}
+        <Frequantly></Frequantly>
+
+        {/* <div className="!z-50">
           <Grow></Grow>
-        </div>
+        </div> */}
         <div className="!z-10">
           <Footer></Footer>
-        </div> */}
+        </div>
       </div>
     </div>
   );

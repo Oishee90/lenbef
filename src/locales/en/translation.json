@@ -1,0 +1,115 @@
+{
+    "navbar": {
+      "home": "Home",
+      "about": "About",
+      "resources": "Resources",
+      "contact": "Contact us",
+      "login": "Log in",
+      "signup": "Sign up",
+      "language": "Language"
+    },
+    "banner": {
+        "title": "Education that equips you for the future",
+        "description": "Now at the present time, the circle is placed so that it sits at the arc, necessarily. Strength and mass lead to a structured flow of learning. Now it is a sharply refined, elevated structure.",
+        "signup": "Sign Up Now"
+      },
+  "milestones": {
+  "schools": "Schools",
+  "teachers": "Valued Teachers",
+  "students": "Happy Students",
+  "schoolsNumber": "195",
+  "teachersNumber": "1M",
+  "studentsNumber": "17M"
+},
+"about":{
+    "title": "About Us",
+    "subtitle":
+      "Yomima providing the best tutor service to the students around the globe.",
+    "paragraph1":
+      "Yomima Technology Solutions is an AI Writing website that provides users with a powerful and efficient tool for automatically creating unique content. The tool is powered by advanced AI technology that can quickly and accurately generate high-quality written content. With AI Writing Tool, users can quickly create content for a variety of purposes, including blog posts, website content, tutoring support, and more.",
+    "paragraph2":
+      "Yomima Technology Solutions is an AI Writing website that provides users with a powerful and efficient tool for automatically creating unique content. The tool is powered by advanced AI technology that can quickly and accurately generate high-quality written content. With AI Writing Tool, users can quickly create content for a variety of purposes, including blog posts, website content, tutoring support, and more.",
+    "paragraph3":
+      "We are excited to introduce our new AI Writing Tool website. Our AI Writing Tool is a powerful and effective way to create unique content for your website. Our AI Writing Tool utilizes advanced AI technology to generate high-quality content that is perfect for your needs.",
+    "paragraph4":
+      "Additionally, our AI Writing Tool has a built-in editor that allows you to customize the content to your individual needs. Our AI Writing Tool is a powerful tool that allows you to create unique content quickly and easily.",
+    "paragraph5":
+      "If you are looking for an effective way to create high-quality content for your website, then our AI Writing Tool is the perfect solution. We look forward to working with you to provide you with the best AI Writing Tool available.",
+      "joinNow": "Join Now" 
+  },
+  "feature":{
+    "title": "Features",
+    "subtitle":
+      "We are always working to provide you best of the features in all aspects.",
+    "paragraph1":
+      "Install our top-rated dropshipping app to your e-commerce site and get access to US Suppliers, AliExpress vendors, and the best dropshipping and custom products. Start selling the right products to the customer base that you know best. We connect you to inventory, so you can focus on creating a catalog of profitable products for your online store.",
+    "paragraph2":
+      "Install our top-rated dropshipping app to your e-commerce site and get access to US Suppliers, AliExpress vendors, and the best dropshipping and custom products. Start selling the right products to the customer base that you know best. We connect you to inventory, so you can focus on creating a catalog of profitable products for your online store."
+   
+  },
+  "faq": {
+  "title": "Frequently Asked Questions",
+  "description": "Find quick answers to common questions about our features, services, and more. Still need help? Contact us anytime!",
+  "questions": [
+    {
+      "question": "Is there a free trial for subscription pricing plans?",
+      "answer": "Yes, many subscription-based services offer a free trial for their pricing plans. This allows users to try out the features before committing to a paid subscription."
+    },
+    {
+      "question": "Can I cancel my subscription at any time?",
+      "answer": "Yes, you can cancel your subscription at any time from your account settings."
+    },
+    {
+      "question": "Do you offer customer support?",
+      "answer": "Absolutely! Our team is available 24/7 to assist you via email and chat."
+    }
+  ]
+},
+
+    "contact": {
+      "title1": "Contact",
+      "title2": "Us",
+      "subtitle": "Have questions or need support? We're here to help!",
+      "namePlaceholder": "What is your name? *",
+      "emailPlaceholder": "What is your Email? *",
+      "phonePlaceholder": "What is your phone number?",
+      "messagePlaceholder": "Write your message here",
+      "sendMessage": "Send Message"
+    },  
+"footer": {
+    "title": "What are you waiting for?",
+    "getStarted": "Get Started",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "features": "Features",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "policy": "Policy",
+    "privacy": "Privacy",
+    "terms": "Terms & Condition",
+    "socialMedia": "Social Media",
+    "aiEducation": "AI-Powered Education System for Student"
+  },
+"Pricing":
+{
+    "pricing_title": "Pricing",
+    "plan_label": "Plan",
+    "pricing_subtitle": "Our plans are simple and clear, they are based on the total credits used in each month.",
+    "plan_free": "Free",
+    "price_free": "Br0",
+    "plan_basic": "Basic",
+    "price_basic": "Br250",
+    "plan_standard": "Standard",
+    "price_standard": "Br500",
+    "plan_premium": "Premium",
+    "price_premium": "Br1000",
+    "feature_kpi": "KPI Tracking & Insights",
+    "feature_ai_assistant": "AI Assistant",
+    "feature_chatbot": "Chat Bot",
+    "per_month": "Per Month",
+    "plan_description": "The Professional Plan Offers The Best Value With AI Automation, Seamless Integrations, And Priority Support",
+    "choose_plan": "Choose Plan"
+  }
+  
+
+  }
