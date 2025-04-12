@@ -3,7 +3,7 @@ import { TbXboxXFilled } from "react-icons/tb";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
 import { FiCamera } from "react-icons/fi";
-
+import Swal from "sweetalert2";
 const AddTeacher = ({ onClose }) => {
   const [name, setName] = useState("Admin Name");
   const [email, setEmail] = useState("admin@gmail.com");
@@ -17,10 +17,30 @@ const AddTeacher = ({ onClose }) => {
   const handleSave = (e) => {
     e.preventDefault();
     setIsUpdating(true);
+
+    const userRole = "teacher";
+
     // API call simulation
     setTimeout(() => {
       setIsUpdating(false);
-      alert("Profile updated successfully!");
+
+      if (userRole === "teacher") {
+        Swal.fire({
+          icon: "success",
+          title: "Teacher Added!",
+          text: "You have successfully added a teacher profile.",
+          timer: 2000,
+          showConfirmButton: false,
+        });
+      } else {
+        Swal.fire({
+          icon: "success",
+          title: "Profile Updated!",
+          text: "Profile updated successfully!",
+          timer: 2000,
+          showConfirmButton: false,
+        });
+      }
     }, 1000);
   };
   const handleImageChange = (e) => {

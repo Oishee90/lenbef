@@ -349,3 +349,5 @@ export const schoolData = [
       "https://via.placeholder.com/150/607D8B/ffffff?text=Hilltop+Secondary+School",
   },
 ];
+
+

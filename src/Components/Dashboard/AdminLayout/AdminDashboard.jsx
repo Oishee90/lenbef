@@ -204,7 +204,7 @@ const AdminDashboard = () => {
   const handleYearChange = (e) => {
     const year = parseInt(e.target.value);
     setSelectedYear(year);
-    setChartData(selectedUserYear[year]); // Update chart data based on selected year
+    setChartData(subscriberGrowthData[year]); // Correct data assignment
   };
 
   const handleUserYearChange = (e) => {
@@ -220,32 +220,27 @@ const AdminDashboard = () => {
 
   return (
     <div className="p-6 space-y-6 montserrat">
-      <h2 className="text-base montserrat font-bold">
-        Hey Mariana -{" "}
-        <span className="text-[#71717A] font-medium">
-          here's what's happening with your store today
-        </span>
-      </h2>
+      <h2 className="text-base montserrat font-bold">Dashboard</h2>
       <div className="grid grid-cols-4 gap-6">
-        <div className="p-6 text-center border rounded-xl shadow-xl">
+        <div className="p-6 text-center bg-[#EAF2EA] border rounded-xl shadow-xl">
           <h3 className="text-xl font-normal text-[#000000] montserrat">
             Total User
           </h3>
           <p className="font-semibold text-[#1C1C1C] text-4xl mt-5">7,265</p>
         </div>
-        <div className="p-6 text-center border rounded-xl shadow-xl">
+        <div className="p-6 text-center bg-[#EAF2EA] border rounded-xl shadow-xl">
           <h3 className="text-xl font-normal text-[#000000] montserrat">
             Subscriber
           </h3>
           <p className="font-semibold text-[#1C1C1C] text-4xl mt-5">3,671</p>
         </div>
-        <div className="p-6 text-center border rounded-xl shadow-xl">
+        <div className="p-6 text-center  bg-[#EAF2EA] border rounded-xl shadow-xl">
           <h3 className="text-xl font-normal text-[#000000] montserrat">
             New Users
           </h3>
           <p className="font-semibold text-[#1C1C1C] text-4xl mt-5">156</p>
         </div>
-        <div className="p-6 text-center border rounded-xl shadow-xl">
+        <div className="p-6 text-center bg-[#EAF2EA] border rounded-xl shadow-xl">
           <h3 className="text-xl font-normal text-[#000000] montserrat">
             Active User
           </h3>
@@ -254,33 +249,6 @@ const AdminDashboard = () => {
       </div>
 
       <div className="grid grid-cols-2 gap-6">
-        <div className="p-4 border rounded-lg shadow">
-          <div className="flex justify-between items-center mb-4">
-            <h3 className="text-lg font-semibold">Subscriber Growth</h3>
-            <div className="relative w-fit bg-[#F8F8F8] rounded-lg flex items-center px-4 py-2 border border-[#E2E2E2]">
-              <select
-                value={selectedYear}
-                onChange={handleYearChange}
-                className="bg-[#F8F8F8] text-[#595D62] text-sm pl-2 pr-6 py-1 cursor-pointer outline-none appearance-none"
-              >
-                {years.map((year) => (
-                  <option key={year} value={year}>
-                    {year}
-                  </option>
-                ))}
-              </select>
-              <IoChevronDownOutline className="absolute right-2 text-[#000000] w-4 h-4 pointer-events-none" />
-            </div>
-          </div>
-          <ResponsiveContainer width="100%" height={200}>
-            <BarChart data={chartData}>
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Bar dataKey="value" fill="#2F6197" />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
         <div className="p-4 border rounded-lg shadow">
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-lg font-semibold mb-4">User Growth</h3>
@@ -307,10 +275,37 @@ const AdminDashboard = () => {
               <Area
                 type="monotone"
                 dataKey="value"
-                fill="#2F6197"
-                stroke="#1E3A8A"
+                fill="#BFD5BC"
+                stroke="#317828"
               />
             </AreaChart>
+          </ResponsiveContainer>
+        </div>
+        <div className="p-4 border rounded-lg shadow">
+          <div className="flex justify-between items-center mb-4">
+            <h3 className="text-lg font-semibold">Subscriber Growth</h3>
+            <div className="relative w-fit bg-[#F8F8F8] rounded-lg flex items-center px-4 py-2 border border-[#E2E2E2]">
+              <select
+                value={selectedYear}
+                onChange={handleYearChange}
+                className="bg-[#F8F8F8] text-[#595D62] text-sm pl-2 pr-6 py-1 cursor-pointer outline-none appearance-none"
+              >
+                {years.map((year) => (
+                  <option key={year} value={year}>
+                    {year}
+                  </option>
+                ))}
+              </select>
+              <IoChevronDownOutline className="absolute right-2 text-[#000000] w-4 h-4 pointer-events-none" />
+            </div>
+          </div>
+          <ResponsiveContainer width="100%" height={200}>
+            <BarChart data={chartData}>
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Bar dataKey="value" fill="#317828" />
+            </BarChart>
           </ResponsiveContainer>
         </div>
       </div>
@@ -340,8 +335,8 @@ const AdminDashboard = () => {
             <Area
               type="monotone"
               dataKey="value"
-              fill="#2F6197"
-              stroke="#1E3A8A"
+              fill="#BFD5BC"
+              stroke="#317828"
             />
           </AreaChart>
         </ResponsiveContainer>
@@ -352,17 +347,17 @@ const AdminDashboard = () => {
         <table className="w-full text-left border-collapse">
           <thead>
             <tr className="border-b">
-              <th className="p-2 text-[#1E3A8A] montserrat text-xl">
+              <th className="p-2 text-[#317828] montserrat text-xl">
                 School Name
               </th>
-              <th className="p-2 text-[#1E3A8A] montserrat text-xl">Email</th>
-              <th className="p-2 text-[#1E3A8A] montserrat text-xl">
+              <th className="p-2 text-[#317828] montserrat text-xl">Email</th>
+              <th className="p-2 text-[#317828] montserrat text-xl">
                 Location
               </th>
-              <th className="p-2 text-[#1E3A8A] montserrat text-xl">
+              <th className="p-2 text-[#317828] montserrat text-xl">
                 Subscription Type
               </th>
-              <th className="p-2 text-[#1E3A8A] montserrat">Income</th>
+              <th className="p-2 text-[#317828] montserrat">Income</th>
             </tr>
           </thead>
           <tbody>

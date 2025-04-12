@@ -69,3 +69,32 @@
   .main-color {
     color: #2C6C24;
   }
+  @keyframes rotateCircle {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes zoomVibrate {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.15);
+    }
+  }
+  
+  /* Utility Classes */
+  .rotate-animation {
+    animation: rotateCircle 2s linear infinite;
+  }
+  
+  .zoom-animation {
+    animation: zoomVibrate 0.6s ease-in-out infinite;
+  }
+  
+
+  

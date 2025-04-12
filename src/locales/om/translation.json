@@ -55,6 +55,17 @@
     }
   ]
 },
+"contact": {
+  "title1": "Nu",
+  "title2": "Haaqunnammu",
+  "subtitle": "Gaaffii qabduu? Yookaan gargaarsa barbaadduu? Nuti as jirra si gargaarruuf!",
+  "namePlaceholder": "Maqaan kee eenyu? *",
+  "emailPlaceholder": "Imeeyliin kee maali? *",
+  "phonePlaceholder": "Lakkoofsa bilbilaa kee?",
+  "messagePlaceholder": "Ergaa kee asitti barreessi",
+  "sendMessage": "Ergaa Ergi"
+}
+,
 "footer": {
   "title": "Maaltu isin eeggachaa jira?",
   "getStarted": "Eegalu",
@@ -68,7 +79,171 @@
   "terms": "Shirkii fi Haala",
   "socialMedia": "Miidiyaa Hawaasaa",
   "aiEducation": "Barattootaaf Sirna Barnoota Humna AIn Deggarame"
+},
+"Pricing": {
+  "pricing_title": "Gatii",
+  "plan_label": "Karoorri",
+  "pricing_subtitle": "Karoorri keenya salphaa fi ifaa dha, ji’a keessa gatii waliigala kredii itti fayyadamte irratti hundaa’a.",
+  "plan_free": "Bilisaan",
+  "price_free": "Br0",
+  "plan_basic": "Bu’uura",
+  "price_basic": "Br250",
+  "plan_standard": "Sandaardii",
+  "price_standard": "Br500",
+  "plan_premium": "Piriimiyemii",
+  "price_premium": "Br1000",
+  "feature_kpi": "KPI Sakatta’iinsa fi Hubannoo",
+  "feature_ai_assistant": "Gargaaraa AI",
+  "feature_chatbot": "Chaatii Botii",
+  "per_month": "Ji’a Ji’aan",
+  "plan_description": "Karoora Ogummaa kun gatii ol’aanaa qaba, otuu hin fashalsin AI, walitti hidhamiinsa salphaa fi gargaarsa filatamaa ni qabaata.",
+  "choose_plan": "Karoorra Filadhu"
+},
+"login": {
+  "signIn": "Seeni",
+  "emailPlaceholder": "Imeelii Adressii",
+  "password": "Jecha Darbe",
+  "passwordPlaceholder": "Jecha darbii kee galchi",
+  "remember": "Duraan dursee yaadadhu torbaan 30f",
+  "forgot": "Jecha darbii haafteetta?",
+  "or": "ykn",
+  "google": "Google waliin seeni",
+  "noAccount": "Account hin qabduu?",
+  "signup": "Galmee"
+},
+"forgot": {
+  "forgotPassword": "Jecha iccitiin dhufe",
+  "enterYourMail": "Iimeelii kee galchi",
+  "sendOTP": "OTP ergaa",
+  "emailRequired": "Iimeelii barbaachisaa dha."
+},
+"setNewPassword": {
+  "resetPassword": "Jecha iccitiin dhufe",
+  "newPassword": "Jecha iccitiin haaraa",
+  "reenterNewPassword": "Jecha iccitiin haaraa deebi'ee galchi",
+  "set": "Keessaa buusi",
+  "allFieldsRequired": "Maqaa, Imeelii fi Jecha iccitiin hunda guutuu qaba.",
+  "passwordMismatch": "Jechoonni iccitiin wal hin simatan."
+},
+"verification": {
+  "heading": "OTP",
+  "continue": "Itti fufi",
+  "success": "✅ Mirkaneessi milkaa’e! Gara fuulduraatti geeffamaa jira...",
+  "error": "❌ Mee lakkaddaa sirrii ta’e 4-giddu galeessa galchi."
+},
+"success": {
+  "passwordUpdated": "Jecha iccitii kee haaraa taasifameera. Mee yeroo yerootti jijjiiruu hin dagatin.",
+  "congratulations": "Baga gammaddan",
+  "continue": "Itti fufi"
+},
+
+  "signup": {
+    "createAccount": "Akaawunti Uumuu",
+    "fullName": "Maqaa Guutuu",
+    "email": "Iimeelii",
+    "password": "Jecha darbii",
+    "signUpWithGoogle": "Google’n galmaa’ii",
+    "alreadyHaveAccount": "Akaawuntii qaba laataa?",
+    "login": "Seeni",
+    "selectGrade": "Sadarkaa Filadhu",
+    "selectGender": "Saala Filadhu",
+    "cell": "Bilbila",
+    "school": "Mana Barumsaa",
+    "or": "Yookaan"
+  },
+"article": {
+  "generateArticles": "Barruu uumi",
+  "generateArticlesDesc": "AI mata-duree fi qindaa’insa gara barruulee dheeraa fi nama hawwatanitti jijjiiruuf",
+  "language": "Afaan",
+  "languageOptions": [
+    { "label": "Afaan fili", "value": "" },
+    { "label": "English", "value": "English" },
+    { "label": "Amharic", "value": "Amharic" },
+    { "label": "Oromo", "value": "Oromo" }
+  ],
+  "keywords": "Jecha ijoo addaan baasuun galchi (filannoo)",
+  "articleTitle": "Mata-duree barruu",
+  "writeArticle": "Barruu barreessi"
+},
+"articleActions": {
+  "back": "Deebi'i",
+  "copy": "Gulaali",
+  "export": "Ergi",
+  "exportAsDocx": "DOCXtti ergi",
+  "exportAsPdf": "PDFtti ergi"
 }
+,
+"dashboard": {
+  "dashboard": "Daashiboordii",
+  "aiAssistant": "Gargaaraa Wabii Ogummaa Wabii",
+  "englishProficiency": "Ogummaa Afaan Ingiliffaa",
+  "articleGenerator": "Madda Barreessaa",
+  "logout": "Ba'i"
+},
+"englishPractice": {
+  "title": "Mee barsiisaa kutaa kee filadhu",
+    "startchat": "Mari'achuu jalqabi",
+  "heading": "Dandeettii Afaan Ingilizii Kee Haasaa AI Wajjin Gabbisi!",
+  "paragraph": "Browsariin kee dubbisuu qubeewwan sagalee hin deeggaru.",
+    "conversationHistory":  "💬 Seenaa Waliigalaa Kee"
+
+},
+
+"profileSection": {
+  "viewProfile": "Fayyadama Ilaali",
+  "editProfile": "Fayyadama Sirreessi",
+  "name": "Maqaa",
+  "studentName": "Maqaa Barataa",
+  "email": "Imeelii",
+  "cell": "Bilbila",
+  "student": "Barataa",
+  "school": "Mana Barumsaa",
+  "save": "Olkaa’i",
+  "gender": "Saala",
+  "genderValue": "Saala Filadhu",
+  "grade": "Kutaa",
+  "gradeValue": "Kutaa Filadhu",
+  "saveChanges": "Waliigalteewwan Olkaa’i"
+},
+
+"popularSection": {
+  "heading": "Beekkamaa",
+  "totalHours": "Sa’aatii Guutuu",
+  "totalActivity": "Hojiiwwan Guutuu",
+  "items": [
+    {
+      "title": "Gargaarsa Kutaa Barnootaa",
+      "description": "Meeshaa AI tajaajila maashinii barnootaa fi afaan hubannaa uumamaa fayyadamuun CV fi raayizimee ogummaa fi bu’a qabeessa ta’an qopheessuuf gargaaru.",
+       "route": "/dashboard/aiAssistant"
+    },
+    {
+      "title": "Barnoota Afaan Ingilizii AI’n Deggaramu",
+      "description": "Meeshaa AI dogoggora qubee fi qajeelcha jechootaa sirreessuuf kan oolu, sirna barreessuu fooyyessuuf gargaaru.",
+      "route": "/dashboard/english"
+    },
+    {
+      "title": "Uumama Barreessaa AI",
+      "description": "Faayiliiwwan bareedaa, qabatamaa fi akka barbaachisuutti sagalee irratti xiyyeeffatan oomishuudhaaf tajaajilu.",
+         "route": "/dashboard/article"
+    },
+    {
+      "title": "Gargaarsa Hojii Barreessuu",
+      "description": "Barattoota gorsa dhuunfaa fi yaada kenniinsa cimaa ta’een dandeettii barreessuu isaanii fooyyessuuf gargaara.",
+       "route": "/dashboard/aiAssistant"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

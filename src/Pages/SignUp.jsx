@@ -13,6 +13,7 @@ import logo from "../assets/loginlogo.png";
 import leaf from "../assets/leaf.png";
 import image from "../assets/logoimg.png";
 import { FcGoogle } from "react-icons/fc";
+import { useTranslation } from "react-i18next";
 const grades = [
   "Grade 1",
   "Grade 2",
@@ -39,7 +40,7 @@ const SignUp = () => {
   const [error, setError] = useState(" ");
   const [role, setRole] = useState("Admin");
   const [grade, setGrade] = useState("");
-
+  const { t } = useTranslation();
   const [showOptions, setShowOptions] = useState(false);
   const toggleDropdown = () => setShowOptions((prev) => !prev);
   const [gender, setGender] = useState("");
@@ -99,12 +100,12 @@ const SignUp = () => {
           </div>
           <div className=" flex flex-col justify-start items-start lg:pl-48 ">
             <h2 className="text-2xl    poppins  lg:text-[38px] font-bold mt-6 mb-2">
-              Create Account
+              {t("signup.createAccount")}
             </h2>
 
             <form
               //  onSubmit={handleSubmit}
-              className="w-2/3 space-y-3 mt-6"
+              className="w-2/3 space-y-6 mt-6"
             >
               <div className="flex flex-col mt-2">
                 <input
@@ -112,7 +113,7 @@ const SignUp = () => {
                   name="name"
                   value={name}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Full Name "
+                  placeholder={t("signup.fullName")}
                   className="w-full p-2 border-b border-b-[#C5BDBD]  bg-transparent  montserrat placeholder:text-[#C5BDBD] rounded-b-xl"
                   required
                 />
@@ -124,7 +125,7 @@ const SignUp = () => {
                   name="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Email Adress "
+                  placeholder={t("signup.email")}
                   className="w-full p-2 border-b border-b-[#C5BDBD]  bg-transparent  montserrat placeholder:text-[#C5BDBD] rounded-b-xl"
                   required
                 />
@@ -135,7 +136,7 @@ const SignUp = () => {
                   name="cell"
                   value={name}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Cell"
+                  placeholder={t("signup.cell")}
                   className="w-full p-2 border-b border-b-[#C5BDBD]  bg-transparent  montserrat placeholder:text-[#C5BDBD] rounded-b-xl"
                   required
                 />
@@ -146,7 +147,7 @@ const SignUp = () => {
                   name="School"
                   value={name}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="School"
+                  placeholder={t("signup.school")}
                   className="w-full p-2 border-b border-b-[#C5BDBD]  bg-transparent  montserrat placeholder:text-[#C5BDBD] rounded-b-xl"
                   required
                 />
@@ -162,7 +163,7 @@ const SignUp = () => {
                     onChange={(e) => setGrade(e.target.value)}
                     onFocus={() => setShowOptions(true)}
                     onBlur={() => setTimeout(() => setShowOptions(false), 100)}
-                    placeholder="Select Grade"
+                    placeholder={t("signup.selectGrade")}
                     className="w-full p-2 border-b border-b-[#C5BDBD]  bg-transparent  montserrat placeholder:text-[#C5BDBD] rounded-b-xl "
                     required
                   />
@@ -211,7 +212,7 @@ const SignUp = () => {
                     onChange={(e) => setGender(e.target.value)}
                     onFocus={() => setShowOptions1(true)}
                     onBlur={() => setTimeout(() => setShowOptions1(false), 100)}
-                    placeholder="Select Gender"
+                    placeholder={t("signup.selectGender")}
                     className="w-full p-2 border-b border-b-[#C5BDBD]  bg-transparent  montserrat placeholder:text-[#C5BDBD] rounded-b-xl "
                     required
                   />
@@ -251,32 +252,34 @@ const SignUp = () => {
                   name="password"
                   value={password}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Password"
+                  placeholder={t("signup.password")}
                   className="w-full p-2 border-b border-b-[#C5BDBD]  bg-transparent  montserrat placeholder:text-[#C5BDBD] rounded-b-xl"
                   required
                 />
               </div>
-              <div className="flex justify-center items-center  px- py-2">
+              <div className="flex justify-center items-center  px-6 py-2">
                 <button
                   type="submit"
                   className="w-2/3  bg-[#317828] text-white p-2 rounded-xl montserrat font-bold"
                 >
-                  Create Account
+                  {t("signup.createAccount")}
                 </button>
               </div>
             </form>
             <div className="w-2/3 flex flex-col  justify-center items-center mt-4">
               <div className="flex items-center gap-1 text-[#C5BDBD]">
-                <div className=" border border-[#C5BDBD] w-6"></div> <h1>OR</h1>{" "}
+                <div className=" border border-[#C5BDBD] w-6"></div>{" "}
+                <h1>{t("signup.or")}</h1>{" "}
                 <div className=" border border-[#C5BDBD] w-6"></div>
               </div>
               <button className="flex items-center mt-2 border border-[#D9D9D9] p-2  justify-center rounded-md montserrat font-medium">
-                <FcGoogle className="text-xl mr-2" /> Sign up with Google
+                <FcGoogle className="text-xl mr-2" />
+                {t("signup.signUpWithGoogle")}
               </button>
               <p className=" mt-7  text-[#000000]">
-                Already have an account?{" "}
+                {t("signup.alreadyHaveAccount")}{" "}
                 <NavLink to="/signUp" className="text-[#317828]">
-                  Log In
+                  {t("signup.login")}
                 </NavLink>
               </p>
             </div>

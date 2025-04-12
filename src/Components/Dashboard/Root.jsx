@@ -2,14 +2,13 @@ import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import Header from "./Header";
 import { useEffect } from "react";
 import AdminSidebar from "./Sidebar/AdminSidebar";
-import TeacherSidebar from "./Sidebar/TeacherSidebar";
-import ParentSidebar from "./Sidebar/ParentSidebar";
-import SchoolSidebar from "./Sidebar/SchoolSidebar";
+
 import getRole from "../../utils/role";
 import AdminDashboard from "./AdminLayout/AdminDashboard";
 import TeacherDashboard from "./TeacherLayout/TeacherDashboard";
-import SchoolDashboard from "./SchoolLayout/SchoolDashboard";
-import ParentDashboard from "./ParentLayout/ParentDashboard";
+
+import StudentSidebar from "./Sidebar/StudentSidebar";
+import StudentDashboard from "./StudentLayout/StudentDashboard";
 
 const Root = () => {
   const navigate = useNavigate();
@@ -36,12 +35,9 @@ const Root = () => {
     switch (role) {
       case "Admin":
         return <AdminDashboard />;
-      case "Teacher":
-        return <TeacherDashboard />;
-      case "Principle":
-        return <SchoolDashboard />;
-      case "Parent":
-        return <ParentDashboard />;
+      case "Student":
+        return <StudentDashboard></StudentDashboard>;
+
       default:
         return <div>Unauthorized or invalid role</div>;
     }
@@ -55,9 +51,7 @@ const Root = () => {
       {/* Sidebar - Fixed Position */}
       <div className="w-[280px] fixed left-0 top-0 h-screen">
         {role === "Admin" && <AdminSidebar />}
-        {role === "Teacher" && <TeacherSidebar />}
-        {role === "Parent" && <ParentSidebar />}
-        {role === "Principle" && <SchoolSidebar />}
+        {role === "Student" && <StudentSidebar></StudentSidebar>}
       </div>
 
       {/* Main Content */}

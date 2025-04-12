@@ -13,6 +13,7 @@ import logo from "../assets/loginlogo.png";
 import leaf from "../assets/leaf.png";
 import image from "../assets/logoimg.png";
 import { FcGoogle } from "react-icons/fc";
+import { useTranslation } from "react-i18next";
 const grades = [
   "Grade 1",
   "Grade 2",
@@ -36,7 +37,7 @@ const Login = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(" ");
-  const [role, setRole] = useState("Admin");
+  const [role, setRole] = useState("Student");
   const [grade, setGrade] = useState("");
 
   const [showOptions, setShowOptions] = useState(false);
@@ -50,7 +51,7 @@ const Login = () => {
   // const [isModalOpen, setIsModalOpen] = useState(false);
 
   const navigate = useNavigate();
-
+  const { t } = useTranslation();
   // ... (keep your existing Login.jsx code)
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -74,7 +75,7 @@ const Login = () => {
     // Navigate based on role
     if (role === "Admin") {
       navigate("/dashboard/admin");
-    } else if (role === "Principle") {
+    } else if (role === "Student") {
       navigate("/dashboard/school");
     } else {
       navigate("/dashboard"); // Default route
@@ -169,189 +170,87 @@ const Login = () => {
           </div>
           <div className=" flex flex-col justify-start items-start lg:pl-48 ">
             <h2 className="text-2xl    poppins  lg:text-[38px] font-bold mt-6 mb-2">
-              Create Account
+              {t("login.signIn")}
             </h2>
 
-            <form onSubmit={handleSubmit} className="w-2/3 space-y-3 mt-6">
-              <div className="flex flex-col mt-2">
-                <input
-                  type="name"
-                  name="name"
-                  value={name}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Full Name "
-                  className="w-full p-2 border-b border-b-[#C5BDBD]  bg-transparent  montserrat placeholder:text-[#C5BDBD] rounded-b-xl"
-                  required
-                />
-              </div>
-
+            <form onSubmit={handleSubmit} className="w-2/3 space-y-6 mt-6">
               <div className="flex flex-col mt-2">
                 <input
                   type="email"
                   name="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Email Adress "
+                  placeholder={t("login.emailPlaceholder")}
                   className="w-full p-2 border-b border-b-[#C5BDBD]  bg-transparent  montserrat placeholder:text-[#C5BDBD] rounded-b-xl"
                   required
                 />
               </div>
-              <div className="flex flex-col mt-2">
+
+              <div className="relative mt-9">
                 <input
-                  type="text"
-                  name="cell"
-                  value={name}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Cell"
-                  className="w-full p-2 border-b border-b-[#C5BDBD]  bg-transparent  montserrat placeholder:text-[#C5BDBD] rounded-b-xl"
+                  type={showPassword ? "text" : "password"}
+                  id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder={t("login.passwordPlaceholder")}
+                  className="w-full p-2 border-b border-b-[#C5BDBD]  bg-transparent  montserrat placeholder:text-[#C5BDBD] rounded-b-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
                   required
                 />
-              </div>
-              <div className="flex flex-col mt-2">
-                <input
-                  type="text"
-                  name="School"
-                  value={name}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="School"
-                  className="w-full p-2 border-b border-b-[#C5BDBD]  bg-transparent  montserrat placeholder:text-[#C5BDBD] rounded-b-xl"
-                  required
-                />
-              </div>
-              <div className="flex flex-col mt-2 relative">
-                {/* Input with icon */}
-                <div className="relative w-full">
-                  <input
-                    type="text"
-                    id="grade"
-                    name="grade"
-                    value={grade}
-                    onChange={(e) => setGrade(e.target.value)}
-                    onFocus={() => setShowOptions(true)}
-                    onBlur={() => setTimeout(() => setShowOptions(false), 100)}
-                    placeholder="Select Grade"
-                    className="w-full p-2 border-b border-b-[#C5BDBD]  bg-transparent  montserrat placeholder:text-[#C5BDBD] rounded-b-xl "
-                    required
-                  />
-
-                  {/* Icon button */}
-                  <button
-                    type="button"
-                    onClick={toggleDropdown}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-black"
-                  >
-                    <FaChevronDown
-                      className={`transition-transform duration-200 ${
-                        showOptions ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-                </div>
-
-                {/* Dropdown List */}
-                {showOptions && (
-                  <ul className="absolute z-10 bg-white border border-gray-300 rounded-xl mt-1 w-full max-h-48 overflow-y-auto shadow-md top-[60%]">
-                    {grades
-                      .filter((item) =>
-                        item.toLowerCase().includes(grade.toLowerCase())
-                      )
-                      .map((item) => (
-                        <li
-                          key={item}
-                          onMouseDown={() => setGrade(item)}
-                          className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                        >
-                          {item}
-                        </li>
-                      ))}
-                  </ul>
-                )}
-              </div>
-              <div className="flex flex-col mt-2 relative">
-                {/* Input with icon for Gender */}
-                <div className="relative w-full">
-                  <input
-                    type="text"
-                    id="gender"
-                    name="gender"
-                    value={gender}
-                    onChange={(e) => setGender(e.target.value)}
-                    onFocus={() => setShowOptions1(true)}
-                    onBlur={() => setTimeout(() => setShowOptions1(false), 100)}
-                    placeholder="Select Gender"
-                    className="w-full p-2 border-b border-b-[#C5BDBD]  bg-transparent  montserrat placeholder:text-[#C5BDBD] rounded-b-xl "
-                    required
-                  />
-
-                  {/* Icon button for dropdown */}
-                  <button
-                    type="button"
-                    onClick={toggleDropdown1}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-black"
-                  >
-                    <FaChevronDown
-                      className={`transition-transform duration-200 ${
-                        showOptions1 ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-                </div>
-
-                {/* Gender Dropdown List */}
-                {showOptions1 && (
-                  <ul className="absolute z-10 bg-white border border-gray-300 rounded-xl mt-1 w-full max-h-48 overflow-y-auto shadow-md top-[60%]">
-                    {gender2.map((item) => (
-                      <li
-                        key={item}
-                        onMouseDown={() => setGender(item)}
-                        className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                      >
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-[0.25rem] text-[#575757] "
+                >
+                  {showPassword ? (
+                    <FaRegEyeSlash className="w-[24px] h-[24px]" />
+                  ) : (
+                    <IoEyeOutline className="w-[24px] h-[24px]" />
+                  )}
+                </button>
               </div>
 
               <div className="flex justify-between items-center text-sm mb-9">
                 <label className="flex items-center">
                   <input type="checkbox" className="mr-2" required />
-                  Remember for 30 days
+                  {t("login.remember")}
                 </label>
 
                 <NavLink
                   to="/forgot"
                   className="text-[#1E3A8A] hover:underline poppins "
                 >
-                  Forgot Password?
+                  {t("login.forgot")}
                 </NavLink>
               </div>
-              <button
-                type="submit"
-                className="w-full bg-[#1E3A8A] text-white p-2 rounded-xl montserrat font-bold"
-              >
-                Login
-              </button>
+              <div className="flex justify-center items-center  px-6 py-2">
+                <button
+                  type="submit"
+                  className="w-2/3  bg-[#317828] text-white p-2 rounded-xl montserrat font-bold"
+                >
+                  {t("login.remember")}
+                </button>
+              </div>
             </form>
-            <div className="flex justify-between gap-20 items-center mt-4">
+            <div className="w-2/3 flex flex-col  justify-center items-center mt-4">
+              <div className="flex items-center gap-1 text-[#C5BDBD]">
+                <div className=" border border-[#C5BDBD] w-6"></div>{" "}
+                <h1>{t("login.or")}</h1>{" "}
+                <div className=" border border-[#C5BDBD] w-6"></div>
+              </div>
               <button className="flex items-center mt-2 border border-[#D9D9D9] p-2  justify-center rounded-md montserrat font-medium">
-                <FcGoogle className="text-xl mr-2" /> Sign up with Google
+                <FcGoogle className="text-xl mr-2" /> {t("login.google")}
               </button>
-              <button className="flex items-center mt-2 border border-[#D9D9D9] p-2  justify-center rounded-md montserrat font-medium">
-                <FaApple className="text-xl mr-2" /> Sign in with Apple
-              </button>
+              <p className=" mt-7  text-[#000000]">
+                {t("login.noAccount")}{" "}
+                <NavLink to="/signUp" className="text-[#317828]">
+                  {t("login.signup")}
+                </NavLink>
+              </p>
             </div>
-
-            <p className=" mt-2">
-              Don’t have an account?{" "}
-              <NavLink to="/signUp" className="text-blue-600">
-                Sign up
-              </NavLink>
-            </p>
           </div>
         </div>
         {/* Right Image Section */}
-        <div className=" w-full 2xl:w-1/2  relative left-[13%]">
+        <div className=" w-full 2xl:w-1/2  relative left-[10%]">
           <img src={image} alt="" />
         </div>
       </div>

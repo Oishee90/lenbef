@@ -109,7 +109,140 @@
     "per_month": "Per Month",
     "plan_description": "The Professional Plan Offers The Best Value With AI Automation, Seamless Integrations, And Priority Support",
     "choose_plan": "Choose Plan"
+  },
+  "login": {
+  "signIn": "Sign In",
+  "emailPlaceholder": "Email Address",
+  "password": "Password",
+  "passwordPlaceholder": "Enter your password",
+  "remember": "Remember for 30 days",
+  "forgot": "Forgot Password?",
+  "or": "OR",
+  "google": "Sign in with Google",
+  "noAccount": "Don’t have an account?",
+  "signup": "Sign Up"
+},
+"forgot": {
+  "forgotPassword": "Forgot Password",
+  "enterYourMail": "Enter Your Mail",
+  "sendOTP": "Send OTP",
+  "emailRequired": "Email field is required."
+},
+"setNewPassword": {
+   
+    "resetPassword": "Reset Password",
+    "newPassword": "New Password",
+    "reenterNewPassword": "Re-enter new password",
+    "set": "Set",
+    "allFieldsRequired": "All fields are required.",
+    "passwordMismatch": "Passwords do not match."
   }
+  ,"verification": {
+    "heading": "OTP",
+    "continue": "Continue",
+    "success": "✅ Verification Successful! Redirecting...",
+    "error": "❌ Please enter a valid 4-digit code."
+  },
+  "success": {
+  "passwordUpdated": "Your password has been updated. Please change your password regularly.",
+  "congratulations": "Congratulations",
+  "continue": "Continue"
+},"signup":{ 
+  "createAccount": "Create Account",
+  "fullName": "Full Name",
+  "email": "Email Address",
+  "password": "Password",
+  "signUpWithGoogle": "Sign up with Google",
+  "alreadyHaveAccount": "Already have an account?",
+  "login": "Log In",
+  "selectGrade": "Select Grade",
+  "selectGender": "Select Gender",
+  "cell": "Cell",
+  "school":"School",
+  "or": "OR"
+},
+
+"article": {
+  "generateArticles": "Generate Articles",
+  "generateArticlesDesc": "AI for Transforming Titles and Outlines into Long, Engaging Articles",
+  "language": "Language",
+  "languageOptions": [
+    { "label": "Select a language", "value": "" },
+    { "label": "English", "value": "English" },
+    { "label": "Amharic", "value": "Amharic" },
+    { "label": "Oromo", "value": "Oromo" }
+  ],
+  "keywords": "Focus keywords separated with a comma (optional)",
+  "articleTitle": "Article title",
+  "writeArticle": "Write Article"
+},
+"englishPractice": {
+  "tittle": "Please select your Grade tutor",
+  "startchat": "Start Chat",
+  "heading": "Enhance Your English Proficiency with AI Conversations!",
+  "paragraph": "  Your browser doesn't support speech recognition.",
+  "conversationHistory":"💬 Your Conversation History"
+},
+"articleActions": {
+  "back": "Back",
+  "copy": "Copy",
+  "export": "Export",
+  "exportAsDocx": "Export as DOCX",
+  "exportAsPdf": "Export as PDF"
+},
+"dashboard": {
+  "dashboard": "Dashboard",
+  "aiAssistant": "Artificial Intelligence Assistant",
+  "englishProficiency": "English Proficiency",
+  "articleGenerator": "Article Generator",
+  "logout": "Log Out"
+},
+"profileSection": {
+  "viewProfile": "View Profile",
+  "editProfile": "Edit Profile",
+  "name": "Name",
+  "studentName": "Student Name",
+  "email": "Email",
+
+  "cell": "Cell",
+"student": "Student",
+  "school": "School",
+ "save":"save ",
+  "gender": "Gender",
+  "genderValue": "Select Gender",
+  "grade": "Grade",
+  "gradeValue": "Select Grade",
+  "saveChanges": "Save Changes"
+},
+"popularSection": {
+        "heading": "Popular",
+          "totalHours": "Total Hour",
+        "totalActivity": "Total Activity",
+        "items": [
+          {
+            "title": "Grade Specific Assistance",
+            "description": "An AI-powered tool that utilizes machine learning and natural language processing to generate professional and effective CVs and resumes.",
+              "route": "/dashboard/aiAssistant"
+          },
+          {
+            "title": "AI English Learning",
+            "description": "An AI-powered tool that corrects English grammar and spelling errors to improve writing quality.",
+            "route": "/dashboard/english"
+          },
+          {
+            "title": "AI Article Generator",
+            "description": "Generating high-quality paragraphs with relevant content and appropriate tone for various writing tasks.",
+             "route": "/dashboard/article"
+          },
+          {
+            "title": "Assignment Assistance",
+            "description": "Assists students in improving their essay writing skills by providing personalized feedback and suggestions.",
+             "route": "/dashboard/aiAssistant"
+          }
+        ]
+      }
+    }
   
 
-  }
+
+  

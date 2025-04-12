@@ -7,7 +7,7 @@ import { LuUserRoundPlus } from "react-icons/lu";
 import { FaUsers } from "react-icons/fa";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { FiSettings } from "react-icons/fi";
-import logo from "../../../assets/logo.png";
+import logo from "../../../assets/logo-lenbef.png";
 import { PiListStarFill } from "react-icons/pi";
 const AdminSidebar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -46,10 +46,7 @@ const AdminSidebar = () => {
       {/* Logo Section */}
       <div className="flex flex-col  py-4">
         <div className="flex px-6 items-center gap-2 pb-4 pt-2">
-          <img src={logo} alt="Logo" className="h-[63px] w-[63px] mb-2 " />
-          <h1 className=" montserrat text-[#222222] text-lg  font-medium whitespace-nowrap">
-            WayLearn AI
-          </h1>
+          <img src={logo} alt="Logo" className="h-[63px] w-full mb-2 " />
         </div>
         {/* Menu Items */}
         <nav className="flex flex-col  text-[#364636]">
@@ -65,7 +62,7 @@ const AdminSidebar = () => {
                 className={`flex items-center space-x-2 justify-start gap-2 w-[250px] h-[50px]  p-5 text-centfer
                     ${
                       isActiveDashboard
-                        ? "bg-[#10589E] text-[#FAF1E6] rounded-xl"
+                        ? "bg-[#317828] text-[#FAF1E6] rounded-xl"
                         : "text-[#18181B]"
                     }`}
               >
@@ -88,7 +85,7 @@ const AdminSidebar = () => {
                 className={`flex items-center space-x-2 justify-start gap-2 w-[250px] h-[50px]  p-5 text-centfer
                     ${
                       isActiveUsers
-                        ? "bg-[#10589E] text-[#FAF1E6] rounded-xl"
+                        ? "bg-[#317828] text-[#FAF1E6] rounded-xl"
                         : "text-[#18181B]"
                     }`}
               >
@@ -111,7 +108,7 @@ const AdminSidebar = () => {
                 className={`flex items-center space-x-2 justify-start gap-2 w-[250px] h-[50px]  p-5 text-centfer
                     ${
                       isActiveAdmin
-                        ? "bg-[#10589E] text-[#FAF1E6] rounded-xl"
+                        ? "bg-[#317828] text-[#FAF1E6] rounded-xl"
                         : "text-[#18181B]"
                     }`}
               >
@@ -134,7 +131,7 @@ const AdminSidebar = () => {
                 className={`flex items-center space-x-2 justify-start gap-2 w-[250px] h-[50px]  p-5 text-centfer
                     ${
                       isActiveSubs
-                        ? "bg-[#10589E] text-[#FAF1E6] rounded-xl"
+                        ? "bg-[#317828] text-[#FAF1E6] rounded-xl"
                         : "text-[#18181B]"
                     }`}
               >
@@ -157,7 +154,7 @@ const AdminSidebar = () => {
                 className={`flex items-center space-x-2 justify-start gap-2 w-[250px] h-[50px]  p-5 text-centfer
                     ${
                       isActiveSettings
-                        ? "bg-[#10589E] text-[#FAF1E6] rounded-xl"
+                        ? "bg-[#317828] text-[#FAF1E6] rounded-xl"
                         : "text-[#18181B]"
                     }`}
               >
