@@ -157,7 +157,7 @@ const Navbar = () => {
                   to="/signUp"
                   className="montserrat md:text-base rounded-3xl bg-[#317828] px-3 py-2 sm:px-5 sm:py-2.5 text-sm font-medium text-[#FFE500]"
                 >
-                  dashboard {t("navbar.signup")}
+                  {t("navbar.signup")}
                 </NavLink>
               </>
             )}
