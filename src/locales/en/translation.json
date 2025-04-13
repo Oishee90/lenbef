@@ -6,7 +6,8 @@
       "contact": "Contact us",
       "login": "Log in",
       "signup": "Sign up",
-      "language": "Language"
+      "language": "Language",
+      "dashboard":"Dashboard"
     },
     "banner": {
         "title": "Education that equips you for the future",
@@ -192,7 +193,7 @@
 },
 "dashboard": {
   "dashboard": "Dashboard",
-  "aiAssistant": "Artificial Intelligence Assistant",
+  "aiAssistant": "AI Assistant",
   "englishProficiency": "English Proficiency",
   "articleGenerator": "Article Generator",
   "logout": "Log Out"
@@ -213,6 +214,54 @@
   "grade": "Grade",
   "gradeValue": "Select Grade",
   "saveChanges": "Save Changes"
+},
+"adminPannel": {
+  "dashboard": "Admin Dashboard",
+ "dash":"Dashboard",
+"admin":"Admin",
+  "userManagement": "User Management",
+  "subscription": "Subscription",
+  "settings": "Settings",
+  "logout":"Log Out",
+  "TotalUser":"Total User",
+  "Subscriber":"Subscriber",
+  "userGrowth": "User Growth",
+  "NewUsers":"New Users",
+  " ActiveUser":" Active User",
+  "subscriberGrowth": "Subscriber Growth",
+  "incomeReport": "Income Report",
+  "subscriber":"Subscriber",
+  "SchoolName":"School Name",
+  "Grade":"Grade",
+  "Type":"Type",
+  "View":"View",
+  "Delete":"Delete",
+   "Location":"Location",
+   "Adress":"Address",
+   "PackageName":" Package Name",
+   "PackagePrice":"Package Price",
+   "PackageOffer":"Package Offer",
+   "Action":"Action",
+"Create":"Create",
+"Update":"Update",
+   "Subscription Type":"Subscription Type",
+   "Income":"Income",
+   "Edit": "Edit Profile",
+  "Change": "Change Password",
+  "Current": "Current Password",
+  "New": "New Password",
+  "Confirm": "Confirm Password",
+  "name": "Name",
+  "Email": "Email",
+  "Contactnumber": "Contact Number",
+  "adress": "Address",
+  "save": "Save Changes",
+  "saving":"Saving",
+  "user":"User",
+  "Searchbyusername":" Search by user name",
+  "Terms&Condition":"   Terms & Condition",
+  "Privacy":"Privacy",
+  "ADD":"Add"
 },
 "popularSection": {
         "heading": "Popular",
@@ -241,6 +290,7 @@
           }
         ]
       }
+
     }
   
 

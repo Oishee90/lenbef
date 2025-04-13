@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { IoChevronDownOutline } from "react-icons/io5";
 import { MdDelete } from "react-icons/md";
 import {
@@ -217,32 +218,33 @@ const AdminDashboard = () => {
     setSelectedIncomeYear(year);
     setincomeData(IncopmeData[year]); // Update chart data based on selected year
   };
+  const { t } = useTranslation();
 
   return (
-    <div className="p-6 space-y-6 montserrat">
-      <h2 className="text-base montserrat font-bold">Dashboard</h2>
+    <div className="p-6 space-y-6 roboto">
+      <h2 className="text-base roboto font-bold"> {t("adminPannel.dash")}</h2>
       <div className="grid grid-cols-4 gap-6">
         <div className="p-6 text-center bg-[#EAF2EA] border rounded-xl shadow-xl">
-          <h3 className="text-xl font-normal text-[#000000] montserrat">
-            Total User
+          <h3 className="text-xl font-normal text-[#000000] roboto">
+            {t("adminPannel.TotalUser")}
           </h3>
           <p className="font-semibold text-[#1C1C1C] text-4xl mt-5">7,265</p>
         </div>
         <div className="p-6 text-center bg-[#EAF2EA] border rounded-xl shadow-xl">
-          <h3 className="text-xl font-normal text-[#000000] montserrat">
-            Subscriber
+          <h3 className="text-xl font-normal text-[#000000] roboto">
+            {t("adminPannel.Subscriber")}
           </h3>
           <p className="font-semibold text-[#1C1C1C] text-4xl mt-5">3,671</p>
         </div>
         <div className="p-6 text-center  bg-[#EAF2EA] border rounded-xl shadow-xl">
-          <h3 className="text-xl font-normal text-[#000000] montserrat">
-            New Users
+          <h3 className="text-xl font-normal text-[#000000] roboto">
+            {t("adminPannel.NewUSers")}
           </h3>
           <p className="font-semibold text-[#1C1C1C] text-4xl mt-5">156</p>
         </div>
         <div className="p-6 text-center bg-[#EAF2EA] border rounded-xl shadow-xl">
-          <h3 className="text-xl font-normal text-[#000000] montserrat">
-            Active User
+          <h3 className="text-xl font-normal text-[#000000] roboto">
+            {t("adminPannel.ActiveUser")}
           </h3>
           <p className="font-semibold text-[#1C1C1C] text-4xl mt-5">2.318</p>
         </div>
@@ -251,7 +253,10 @@ const AdminDashboard = () => {
       <div className="grid grid-cols-2 gap-6">
         <div className="p-4 border rounded-lg shadow">
           <div className="flex justify-between items-center mb-4">
-            <h3 className="text-lg font-semibold mb-4">User Growth</h3>
+            <h3 className="text-lg font-semibold mb-4">
+              {" "}
+              {t("adminPannel.userGrowth")}
+            </h3>
             <div className="relative w-fit bg-[#F8F8F8] rounded-lg flex items-center px-4 py-2 border border-[#E2E2E2]">
               <select
                 value={selectedUserYear}
@@ -283,7 +288,10 @@ const AdminDashboard = () => {
         </div>
         <div className="p-4 border rounded-lg shadow">
           <div className="flex justify-between items-center mb-4">
-            <h3 className="text-lg font-semibold">Subscriber Growth</h3>
+            <h3 className="text-lg font-semibold">
+              {" "}
+              {t("adminPannel.subscriberGrowth")}
+            </h3>
             <div className="relative w-fit bg-[#F8F8F8] rounded-lg flex items-center px-4 py-2 border border-[#E2E2E2]">
               <select
                 value={selectedYear}
@@ -311,7 +319,10 @@ const AdminDashboard = () => {
       </div>
       <div className="p-4 border rounded-lg shadow">
         <div className="flex justify-between items-center mb-4">
-          <h3 className="text-lg font-semibold mb-4">Income Report</h3>
+          <h3 className="text-lg font-semibold mb-4">
+            {" "}
+            {t("adminPannel.incomeReport")}
+          </h3>
           <div className="relative w-fit bg-[#F8F8F8] rounded-lg flex items-center px-4 py-2 border border-[#E2E2E2]">
             <select
               value={selectedIncomeYear}
@@ -343,21 +354,32 @@ const AdminDashboard = () => {
       </div>
 
       <div className="p-4 border rounded-lg shadow">
-        <h3 className="text-2xl font-semibold mb-3">Subscriber</h3>
+        <h3 className="text-2xl font-semibold mb-3">
+          {" "}
+          {t("adminPannel.subscriber")}
+        </h3>
         <table className="w-full text-left border-collapse">
           <thead>
             <tr className="border-b">
-              <th className="p-2 text-[#317828] montserrat text-xl">
-                School Name
+              <th className="p-2 text-[#317828] roboto text-xl">
+                {" "}
+                {t("adminPannel.SchoolName")}
               </th>
-              <th className="p-2 text-[#317828] montserrat text-xl">Email</th>
-              <th className="p-2 text-[#317828] montserrat text-xl">
-                Location
+              <th className="p-2 text-[#317828] roboto text-xl">
+                {" "}
+                {t("adminPannel.Email")}
               </th>
-              <th className="p-2 text-[#317828] montserrat text-xl">
-                Subscription Type
+              <th className="p-2 text-[#317828] roboto text-xl">
+                {" "}
+                {t("adminPannel.Location")}
               </th>
-              <th className="p-2 text-[#317828] montserrat">Income</th>
+              <th className="p-2 text-[#317828] roboto text-xl">
+                {t("adminPannel.Subscription Type")}
+              </th>
+              <th className="p-2 text-[#317828] roboto">
+                {" "}
+                {t("adminPannel.Income")}
+              </th>
             </tr>
           </thead>
           <tbody>

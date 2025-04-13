@@ -5,7 +5,8 @@ import { IoEyeOutline } from "react-icons/io5";
 import { div } from "framer-motion/client";
 import { TbXboxXFilled } from "react-icons/tb";
 import Swal from "sweetalert2";
-
+import profileimage from "../../../assets/profileBanner.png";
+import { useTranslation } from "react-i18next";
 const AdminProfile = ({ onClose }) => {
   const [profile, setProfile] = useState({ image: "" });
   const [activeTab, setActiveTab] = useState("edit");
@@ -21,7 +22,7 @@ const AdminProfile = ({ onClose }) => {
   const [newpassword, setNewPassword] = useState("");
   const [confirmpassword, setConfirmPassword] = useState("");
   const data = { username: name };
-
+  const { t } = useTranslation();
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -55,7 +56,12 @@ const AdminProfile = ({ onClose }) => {
           <TbXboxXFilled className="text-[#D9D9D9]  w-8 h-8" />
         </button>
 
-        <div className="flex flex-row items-center justify-center gap-6 bg-[#1E3A8A]  rounded-md py-10">
+        <div
+          className="flex flex-row items-center justify-center gap-3    bg-cover bg-center bg-no-repeat rounded-md py-10"
+          style={{
+            backgroundImage: `url(${profileimage})`,
+          }}
+        >
           <div className=" relative">
             <img
               src={
@@ -83,11 +89,11 @@ const AdminProfile = ({ onClose }) => {
           </div>
 
           <div className="flex flex-col  gap-2">
-            <h1 className=" text-[#FFFFFF]  text-xl font-semibold leading-[24px] montserrat">
+            <h1 className=" text-white  text-xl font-bold leading-[24px] montserrat">
               {data?.username}
             </h1>
             <p className=" text-[#34C759]  text-xl font-semibold leading-[24px] montserrat">
-              admin
+              {t("adminPannel.admin")}
             </p>
           </div>
         </div>
@@ -96,15 +102,15 @@ const AdminProfile = ({ onClose }) => {
           <div onClick={() => setActiveTab("edit")} className="cursor-pointer">
             <h1
               className={` montserrat font-semibold text-base  leading-[24px] mb-2 ${
-                activeTab === "edit" ? " text-[#1E3A8A]" : "text-[#707070]"
+                activeTab === "edit" ? " text-[#317828]" : "text-[#707070]"
               }`}
             >
-              Edit Profile
+              {t("adminPannel.Edit")}
             </h1>
             <div
               className={`cursor-pointer w-full ${
                 activeTab === "edit"
-                  ? "border-b-2 border-[#1E3A8A] text-[#1E3A8A]"
+                  ? "border-b-2 border-[#317828] text-[#317828]"
                   : "text-black"
               }`}
             ></div>
@@ -117,16 +123,16 @@ const AdminProfile = ({ onClose }) => {
             <h1
               className={` montserrat font-semibold text-base leading-[24px] mb-2 ${
                 activeTab === "changePassword"
-                  ? " text-[#1E3A8A]"
+                  ? " text-[#317828]"
                   : "text-[#707070]"
               }`}
             >
-              Change Password
+              {t("adminPannel.Change")}
             </h1>
             <div
               className={` montserrat cursor-pointer w-full  ${
                 activeTab === "changePassword"
-                  ? "border-b-2 border-[#1E3A8A] text-[#1E3A8A] "
+                  ? "border-b-2 border-[#317828] text-[#317828] "
                   : "text-black"
               }`}
             ></div>
@@ -141,7 +147,7 @@ const AdminProfile = ({ onClose }) => {
                   htmlFor="name"
                   className="block text-base font-normal text-[#364636]"
                 >
-                  Name
+                  {t("adminPannel.name")}
                 </label>
                 <input
                   type="text"
@@ -158,7 +164,7 @@ const AdminProfile = ({ onClose }) => {
                   htmlFor="email"
                   className="block text-base font-normal text-[#364636]"
                 >
-                  Email
+                  {t("adminPannel.Email")}
                 </label>
                 <input
                   type="email"
@@ -174,7 +180,7 @@ const AdminProfile = ({ onClose }) => {
                   htmlFor="contact"
                   className="block text-base font-normal text-[#364636]"
                 >
-                  Contact Number
+                  {t("adminPannel.Contactnumber")}
                 </label>
                 <input
                   type="text"
@@ -191,7 +197,7 @@ const AdminProfile = ({ onClose }) => {
                   htmlFor="address"
                   className="block text-base font-normal text-[#364636]"
                 >
-                  Address
+                  {t("adminPannel.adress")}
                 </label>
                 <input
                   type="text"
@@ -208,9 +214,11 @@ const AdminProfile = ({ onClose }) => {
                 <div className="w-1/2">
                   <button
                     type="submit"
-                    className="w-full cursor-pointer mt-7 bg-[#1E3A8A] text-white rounded-lg  py-3 hover:opacity-90 text-[20px]"
+                    className="w-full cursor-pointer mt-7 bg-gradient-to-r from-[#317828] to-[#5BDE4A] text-white rounded-lg  py-3 hover:opacity-90 text-[20px]"
                   >
-                    {isUpdating ? "Saving..." : "Save Changes"}
+                    {isUpdating
+                      ? `${t("adminPannel.saving")}`
+                      : `${t("adminPannel.save")}`}
                   </button>
                 </div>
               </div>
@@ -226,7 +234,7 @@ const AdminProfile = ({ onClose }) => {
                   htmlFor="current-password"
                   className="block text-base font-normal text-[#364636]"
                 >
-                  Current Password
+                  {t("adminPannel.Current")}
                 </label>
                 <input
                   type={currentshowPassword ? "text" : "password"}
@@ -234,7 +242,7 @@ const AdminProfile = ({ onClose }) => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter current password"
-                  className="w-full p-2 border border-gray-300 rounded-lg h-[50px] focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full p-2 border border-gray-300 rounded-lg h-[50px] focus:outline-none focus:ring-2 focus:ring-[#317828]"
                   required
                 />
                 <button
@@ -255,7 +263,7 @@ const AdminProfile = ({ onClose }) => {
                   htmlFor="new-password"
                   className="block text-base font-normal text-[#364636]"
                 >
-                  New Password
+                  {t("adminPannel.New")}
                 </label>
                 <input
                   type={newshowPassword ? "text" : "password"}
@@ -263,7 +271,7 @@ const AdminProfile = ({ onClose }) => {
                   value={newpassword}
                   onChange={(e) => setNewPassword(e.target.value)}
                   placeholder="Enter new password"
-                  className="w-full p-2 border border-gray-300 rounded-lg h-[50px] focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full p-2 border border-gray-300 rounded-lg h-[50px] focus:outline-none focus:ring-2 focus:ring-[#317828]"
                   required
                 />
                 <button
@@ -284,7 +292,7 @@ const AdminProfile = ({ onClose }) => {
                   htmlFor="confirm-password"
                   className="block text-base font-normal text-[#364636]"
                 >
-                  Confirm Password
+                  {t("adminPannel.Confirm")}
                 </label>
                 <input
                   type={confirmshowPassword ? "text" : "password"}
@@ -292,7 +300,7 @@ const AdminProfile = ({ onClose }) => {
                   value={confirmpassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   placeholder="Confirm new password"
-                  className="w-full p-2 border border-gray-300 rounded-lg h-[50px] focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full p-2 border border-gray-300 rounded-lg h-[50px] focus:outline-none focus:ring-2 focus:ring-[#317828]"
                   required
                 />
                 <button
@@ -312,9 +320,9 @@ const AdminProfile = ({ onClose }) => {
                 <div className="w-1/2">
                   <button
                     type="submit"
-                    className="w-full cursor-pointer mt-7 bg-[#1E3A8A]  text-white rounded-xl py-3 hover:opacity-90 text-[20px]"
+                    className="w-full cursor-pointer mt-7 bg-gradient-to-r from-[#317828] to-[#5BDE4A]  text-white rounded-xl py-3 hover:opacity-90 text-[20px]"
                   >
-                    Change Password
+                    {t("adminPannel.Change")}s
                   </button>
                 </div>
               </div>

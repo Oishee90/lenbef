@@ -8,7 +8,8 @@
       "contact": "አግኙን",
       "login": "ግባ",
       "signup": "ተመዝገብ",
-      "language": "ቋንቋ"
+      "language": "ቋንቋ",
+      "dashboard":"መቆጣጠሪያ ፌንታ"
     },
     "banner": {
     "title":"ትምህርት ወደ ወደፊት የሚያዘጋጅህ", 
@@ -233,6 +234,53 @@
        "route": "/dashboard/aiAssistant"
     }
   ]
+},  "adminPannel": {
+  "dashboard": "የአስተዳደር ዳሽቦርድ",
+  "dash": "ዳሽቦርድ",
+  "admin": "አስተዳደር",
+  "userManagement": "የተጠቃሚ አስተዳደር",
+  "subscription": "መደበኛነት",
+  "settings": "ቅንብሮች",
+  "logout": "ውጣ",
+  "TotalUser": "ጠቅላላ ተጠቃሚ",
+  "Subscriber": "ተመዝጋቢ",
+  "userGrowth": "የተጠቃሚ እድገት",
+  "NewUsers": "አዲስ ተጠቃሚዎች",
+  " ActiveUser": "ንቁ ተጠቃሚ",
+  "subscriberGrowth": "የተመዝጋቢ እድገት",
+  "incomeReport": "የገቢ ሪፖርት",
+  "subscriber": "ተመዝጋቢ",
+  "SchoolName": "የትምህርት ቤት ስም",
+  "Grade": "ክፍል",
+  "Type": "አይነት",
+  "View": "እይታ",
+  "Delete": "ሰርዝ",
+  "Location": "አካባቢ",
+  "Adress": "አድራሻ",
+  "PackageName": "የጥቅል ስም",
+  "PackagePrice": "የጥቅል ዋጋ",
+  "PackageOffer": "የጥቅል ቅናሽ",
+  "Action": "እርምጃ",
+  "Create": "ፍጠር",
+  "Update": "አዘምን",
+  "Subscription Type": "የመደበኛነት አይነት",
+  "Income": "ገቢ",
+  "Edit": "መገለጫ አርትዕ",
+  "Change": "የይለፍ ቃል ቀይር",
+  "Current": "የአሁኑ የይለፍ ቃል",
+  "New": "አዲስ የይለፍ ቃል",
+  "Confirm": "የይለፍ ቃል አረጋግጥ",
+  "name": "ስም",
+  "Email": "ኢሜይል",
+  "Contactnumber": "የእውቂያ ቁጥር",
+  "adress": "አድራሻ",
+  "save": "ለውጦችን አስቀምጥ",
+  "saving": "በማስቀመጥ ላይ",
+  "user": "ተጠቃሚ",
+  "Searchbyusername": "በተጠቃሚ ስም ፈልግ",
+  "Terms&Condition": "ውሎች እና መመሪያዎች",
+  "Privacy": "ግላዊነት",
+  "ADD": "አክል"
 }
 
 

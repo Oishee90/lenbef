@@ -54,9 +54,11 @@ const StudentSidebar = () => {
     <div className="bg-[#FFFFFF]  border-r-2  border-r-[#E8E8E8]   min-h-screen flex flex-col justify-between  open-sns">
       {/* Logo Section */}
       <div className="flex flex-col  py-4">
-        <div className="flex px-6 items-center gap-2 pb-4 pt-2 ">
-          <img src={logo} alt="Logo" className="h-[63px] w-full mb-2 " />
-        </div>
+        <NavLink to="/">
+          <div className="flex px-6 items-center gap-2 pb-4 pt-2">
+            <img src={logo} alt="Logo" className="h-[63px] w-full mb-2 " />
+          </div>
+        </NavLink>
         {/* Menu Items */}
         <nav className="flex flex-col  text-[#364636]">
           <NavLink

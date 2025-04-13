@@ -6,7 +6,8 @@
       "contact": "Nu qunnamu",
       "login": "Seeni",
       "signup": "Galmaa’i",
-      "language": "Afaan"
+      "language": "Afaan",
+      "dashboard":"Boordii To’annaa"
     },
     "banner": {
         "title": "Barnoota gara fuulduraatti si qopheessu",
@@ -232,7 +233,56 @@
        "route": "/dashboard/aiAssistant"
     }
   ]
+},
+"adminPannel": {
+  "dashboard": "Daashboordii Aadminii",
+  "dash": "Daashboordii",
+  "admin": "Aadminii",
+  "userManagement": "Bulchiinsa Fayyadamtootaa",
+  "subscription": "Galmee",
+  "settings": "Sajoo",
+  "logout": "Ba'i",
+  "TotalUser": "Guutuu Fayyadamtoota",
+  "Subscriber": "Dabalee",
+  "userGrowth": "Gudina Fayyadamtoota",
+  "NewUsers": "Fayyadamtoota Haaraa",
+  " ActiveUser": "Fayyadamtoota Hojii Irra Jiran",
+  "subscriberGrowth": "Gudina Dabalee",
+  "incomeReport": "Gabaasa Galii",
+  "subscriber": "Dabalee",
+  "SchoolName": "Maqaa Mana Barumsaa",
+  "Grade": "Kutaa",
+  "Type": "Gosa",
+  "View": "Mul'isi",
+  "Delete": "Haquu",
+  "Location": "Iddoo",
+  "Adress": "Teessoo",
+  "PackageName": "Maqaa Paakeejii",
+  "PackagePrice": "Gatii Paakeejii",
+  "PackageOffer": "Kufannoo Paakeejii",
+  "Action": "Dalagaa",
+  "Create": "Uumi",
+  "Update": "Haaromsuu",
+  "Subscription Type": "Gosa Galmee",
+  "Income": "Galii",
+  "Edit": "Piroofaayilii Gulaali",
+  "Change": "Jecha Darbii Jijjiiri",
+  "Current": "Jecha Darbii Amma",
+  "New": "Jecha Darbii Haaraa",
+  "Confirm": "Jecha Darbii Mirkaneessi",
+  "name": "Maqaa",
+  "Email": "Imeelii",
+  "Contactnumber": "Lakkoofsa Bilbilaa",
+  "adress": "Teessoo",
+  "save": "Haaromsa Olkaa'i",
+  "saving": "Olkaa’aa Jira",
+  "user": "Fayyadamtoota",
+  "Searchbyusername": "Maqaa Fayyadamaa Barbaadi",
+  "Terms&Condition": "Shira fi Haala",
+  "Privacy": "Dhoksaa",
+  "ADD": "Dabaluu"
 }
+
 
 
 

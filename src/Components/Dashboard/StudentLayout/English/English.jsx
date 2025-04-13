@@ -81,7 +81,7 @@ const English = () => {
   if (!browserSupportsSpeechRecognition) {
     return (
       <p className="text-red-500 text-center mt-10">
-        Your browser doesn't support speech recognition.
+        {t("englishPractice.paragraph")}
       </p>
     );
   }
@@ -112,7 +112,7 @@ const English = () => {
             <p className="roboto text-black text-base">{aiReply}</p>
           </div>
         ) : (
-          <p className="text-gray-400"> {t("englishPractice.paragraph")}</p>
+          <p className="text-gray-400"></p>
         )}
       </div>
 

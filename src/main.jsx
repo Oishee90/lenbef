@@ -19,7 +19,7 @@ import Success from "./Pages/Success";
 import Root from "./Components/Dashboard/Root";
 import getRole from "./utils/role";
 import AdminDashboard from "./Components/Dashboard/AdminLayout/AdminDashboard";
-
+import Settings from "./Components/Dashboard/AdminLayout/Settings/Settings.jsx";
 import User from "./Components/Dashboard/AdminLayout/User/User";
 import SchoolDashboard from "./Components/Dashboard/SchoolLayout/SchoolDashboard";
 import StudentDashboard from "./Components/Dashboard/StudentLayout/StudentDashboard";
@@ -29,6 +29,7 @@ import Artticle from "./Components/Dashboard/StudentLayout/Article/Artticle";
 import AiassistantChat from "./Components/Dashboard/StudentLayout/AI/AiassistantChat";
 import EnglishProficiency from "./Components/Dashboard/StudentLayout/English/EnglishProficiency";
 import GeneratedArticle from "./Components/Dashboard/StudentLayout/Article/GeneratedArticle";
+import Subscription from "./Components/Dashboard/AdminLayout/Subscription/Subscription";
 // Get role from localStorage
 const role = getRole();
 console.log("User data in main.jsx:", role);
@@ -128,18 +129,14 @@ const router = createBrowserRouter([
         element: <GeneratedArticle></GeneratedArticle>,
       },
 
-      // {
-      //   path: "makeAdmin",
-      //   element: <MakeAd></MakeAdmin>,
-      // },
-      // {
-      //   path: "subscription",
-      //   element: <Subscription></Subscription>,
-      // },
-      // {
-      //   path: "settings",
-      //   element: <Settings></Settings>,
-      // },
+      {
+        path: "settings",
+        element: <Settings></Settings>,
+      },
+      {
+        path: "subscription",
+        element: <Subscription></Subscription>,
+      },
 
       // {
       //   path: "recomendation",

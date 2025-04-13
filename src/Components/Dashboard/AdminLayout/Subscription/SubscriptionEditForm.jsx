@@ -1,9 +1,11 @@
 import { div } from "framer-motion/client";
 import { useRef, useState } from "react";
-import logo from "../../../../assets/footerlogo.png";
+import logo from "../../../../assets/logo.webp";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import Swal from "sweetalert2"; // Import SweetAlert2
 import { TbXboxXFilled } from "react-icons/tb";
+import leaf from "../../../../assets/leaf-right.png";
+import { useTranslation } from "react-i18next";
 
 const SubscriptionEditForm = ({ onClose, user }) => {
   const [packageName, setPackageName] = useState("Order Hard Copy");
@@ -36,10 +38,13 @@ const SubscriptionEditForm = ({ onClose, user }) => {
       timer: 3000, // Auto-close after 3 seconds
     });
   };
-
+  const { t } = useTranslation();
   return (
-    <div className="fixed inset-0 bg-black/10 backdrop-blur-sm bg-opacity-50 flex items-center justify-center ">
+    <div className="fixed inset-0 bg-black/10 backdrop-blur-sm bg-opacity-50 flex items-center justify-center roboto ">
       <div className="relative bg-white rounded-2xl  w-full max-w-2xl">
+        <div className="absolute top-[-16px] left-0">
+          <img src={leaf} alt="" />
+        </div>
         <div className="flex items-center justify-end">
           {/* <h1 className="text-xl font-semibold montserrat text-[#2d4ca5]">
                    Make Admin
@@ -48,12 +53,12 @@ const SubscriptionEditForm = ({ onClose, user }) => {
             onClick={onClose}
             className=" cursor-pointer  px-4 py-2 rounded  absolute top-[0%] right-[0%] text-lg"
           >
-            <TbXboxXFilled className="text-[#D9D9D9]  w-8 h-8" />
+            <TbXboxXFilled className="text-[#222222]  w-8 h-8" />
           </button>
         </div>
         <div className="flex flex-col items-center  ">
           {/* Logo & Header */}
-          <div className="w-full h-[200px] bg-[#1E3A8A] py-10 flex justify-center items-center mb-6 pt-6 pb-6 gap-4">
+          <div className="w-[9rem] h-[9rem]   py-10 flex justify-center items-center mb-6 pt-6 pb-6 gap-4">
             <img src={logo} alt="Logo" className=" " />
           </div>
 
@@ -62,54 +67,38 @@ const SubscriptionEditForm = ({ onClose, user }) => {
             {/* Package Name & Price */}
             <div className=" flex gap-10 items-center">
               <div className="">
-                <label className="block montserrat text-[#1E3A8A] font-semibold mb-1 text-base montserrat">
-                  Package Name
+                <label className="block  text-[#222222] font-semibold mb-1 text-base ">
+                  {t("adminPannel.PackageName")}
                 </label>
                 <input
                   type="text"
                   value={packageName}
                   onChange={(e) => setPackageName(e.target.value)}
-                  className="w-full border border-[#1E3A8A] p-2 bg-white text-[#1E3A8A] cursor-text rounded-3xl mt-3"
+                  className="w-full border border-[#317828] p-2 bg-white text-[#222222] cursor-text rounded-3xl mt-3"
                   placeholder="Enter package name"
                 />
               </div>
               <div>
-                <label className="block  text-[#1E3A8A] font-semibold mb-1 text-base montserrat">
-                  Package Price
+                <label className="block  text-[#222222] font-semibold mb-1 text-base ">
+                  {t("adminPannel.PackagePrice")}
                 </label>
                 <input
                   type="text"
                   value={packagePrice}
                   onChange={(e) => setPackagePrice(e.target.value)}
-                  className="w-full border border-[#1E3A8A] p-2 bg-white text-[#1E3A8A] cursor-text rounded-3xl mt-3"
+                  className="w-full border border-[#317828] p-2 bg-white text-[#222222] cursor-text rounded-3xl mt-3"
                   placeholder="Enter package price"
-                />
-              </div>
-            </div>
-
-            {/* Discount Section */}
-            <div className="mt-8">
-              <label className="block  text-[#1E3A8A] font-semibold mb-1 text-base montserrat">
-                Number of Teachers
-              </label>
-              <div className="gap-4">
-                <input
-                  type="number"
-                  value={discount}
-                  onChange={(e) => setDiscount(e.target.value)}
-                  className="w-1/2 border border-[#1E3A8A] p-2 bg-white text-[#1E3A8A] cursor-text rounded-3xl"
-                  placeholder="Enter discount amount"
                 />
               </div>
             </div>
 
             {/* Package Offer Section */}
             <div className="mt-8">
-              <h3 className="text-[#222222] font-semibold mb-2 montserrat text-lg">
-                Package Offer
+              <h3 className="text-[#222222] font-semibold mb-2  text-lg">
+                {t("adminPannel.PackageOffer")}
               </h3>
-              <ul className="space-y-2 text-gray-700 mt-4">
-                <li className="flex items-center montserrat font-semibold">
+              <ul className="space-y-2 text-[#222222] mt-4">
+                <li className="flex items-center  font-semibold">
                   <input
                     type="checkbox"
                     name="chatBot"
@@ -119,7 +108,7 @@ const SubscriptionEditForm = ({ onClose, user }) => {
                   />
                   Unlimited chat with the AI Chat Bot.
                 </li>
-                <li className="flex items-center montserrat font-semibold">
+                <li className="flex items-center  font-semibold">
                   <input
                     type="checkbox"
                     name="fullBook"
@@ -129,7 +118,7 @@ const SubscriptionEditForm = ({ onClose, user }) => {
                   />
                   Access Full Book.
                 </li>
-                <li className="flex items-center montserrat font-semibold">
+                <li className="flex items-center  font-semibold">
                   <input
                     type="checkbox"
                     name="images"
@@ -139,7 +128,7 @@ const SubscriptionEditForm = ({ onClose, user }) => {
                   />
                   200 images in Book.
                 </li>
-                <li className="flex items-center montserrat font-semibold">
+                <li className="flex items-center  font-semibold">
                   <input
                     type="checkbox"
                     name="pdfBook"
@@ -149,7 +138,7 @@ const SubscriptionEditForm = ({ onClose, user }) => {
                   />
                   Downloadable soft copy Pdf book.
                 </li>
-                <li className="flex items-center montserrat font-semibold">
+                <li className="flex items-center  font-semibold">
                   <input
                     type="checkbox"
                     name="discount"
@@ -167,9 +156,9 @@ const SubscriptionEditForm = ({ onClose, user }) => {
               <div className="w-1/2">
                 <button
                   onClick={handleCreate}
-                  className="bg-[#1E3A8A] montserrat w-full text-center text-white px-9 py-3 rounded-full text-lg font-semibold hover:bg-[#4961a3] transition cursor-pointer"
+                  className="bg-[#317828]  w-full text-center text-white px-9 py-3 rounded-full text-lg font-semibold hover:bg-[#4961a3] transition cursor-pointer"
                 >
-                  Update
+                  {t("adminPannel.Update")}
                 </button>
               </div>
             </div>

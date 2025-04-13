@@ -12,11 +12,11 @@ const About = () => {
   return (
     <div className="container mx-auto pt-24 lg:pt-32 pb-24 flex lg:flex-row flex-col gap-10 lg:gap-24 items-center lg:items-start ">
       {/* content */}
-      <div className="lg:w-1/2 w-full">
-        <h1 className="text-[#317828] font-semibold text-[26px] poppins w-full  ">
+      <div className="lg:w-1/2 w-full  ">
+        <h1 className="text-[#317828] font-semibold lg:text-[26px] text-2xl md:text-4xl poppins w-full  lg:text-left text-center ">
           {t("about.title")} {/* Translated title */}
         </h1>
-        <h3 className="text-[#141414] font-medium text-5xl leading-[60px] poppins mt-6  ">
+        <h3 className="text-[#141414] font-medium text-2xl lg:text-5xl leading-[40px]  lg:leading-[60px] poppins mt-6  ">
           {t("about.subtitle")} {/* Translated subtitle */}
         </h3>
         <p className="text-[#1E1E1E] font-normal text-[17.79px] poppins mt-10 ">

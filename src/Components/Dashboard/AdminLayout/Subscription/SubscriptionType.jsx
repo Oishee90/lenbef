@@ -2,13 +2,14 @@ import { useState } from "react";
 import { PiEye } from "react-icons/pi";
 import { FaEdit } from "react-icons/fa";
 import { AiOutlineDelete } from "react-icons/ai";
-import { schoolData} from "../../../../data";
+import { schoolData } from "../../../../data";
 import Swal from "sweetalert2";
 import { FiSearch } from "react-icons/fi";
 import { GrFormPrevious } from "react-icons/gr";
 import { GrFormNext } from "react-icons/gr";
 import { AiOutlineEye } from "react-icons/ai";
 import SubscriptionEditForm from "./SubscriptionEditForm";
+import { useTranslation } from "react-i18next";
 
 const SubscriptionType = () => {
   const [subscribers, setSubscribers] = useState(schoolData);
@@ -16,7 +17,7 @@ const SubscriptionType = () => {
   const [isModalOpen, setIsModalOpen] = useState(false); // Modal State
   const [selectedUser, setSelectedUser] = useState(null);
   const itemsPerPage = 6;
-
+  const { t } = useTranslation();
   // Function to get data for the current page
   const getCurrentPageData = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -38,9 +39,9 @@ const SubscriptionType = () => {
   const handleViewUser = (userId) => {
     const selectedUser = subscribers.find(
       (subscriber) => subscriber.id === userId
-    ); // ID অনুযায়ী ইউজার খোঁজা
-    setSelectedUser(selectedUser); // নির্বাচিত ইউজার স্টেটে সেট করা
-    setIsModalOpen(true); // মডাল ওপেন করা
+    );
+    setSelectedUser(selectedUser);
+    setIsModalOpen(true);
   };
   const handleDeleteUser = (userId) => {
     Swal.fire({
@@ -63,22 +64,22 @@ const SubscriptionType = () => {
   const totalPages = Math.ceil(subscribers.length / itemsPerPage);
   return (
     <div className="container mx-auto">
-      <div className="overflow-x-auto overflow-y-auto p-6 bg-white mt-7">
+      <div className="overflow-x-auto overflow-y-auto  bg-white mt-7">
         <table className="min-w-full">
           <thead className="py-4 mb-5">
             <tr>
               <th className="py-4 px-6 text-lg montserrat font-semibold text-[#222222DE] text-left rounded-l-xl">
-                Package Name
+                {t("adminPannel.PackageName")}
               </th>
               <th className="py-4 px-6 text-lg montserrat font-semibold text-[#222222DE] text-left">
-                Package Price
+                {t("adminPannel.PackagePrice")}
               </th>
 
               <th className="py-4 px-6 montserrat text-lg font-semibold text-[#222222DE] text-left rounded-r-xl">
-                Action
+                {t("adminPannel.Action")}
               </th>
               <th className="py-4 px-6 montserrat text-lg font-semibold text-[#222222DE] text-left rounded-r-xl">
-                Delete
+                {t("adminPannel.Delete")}
               </th>
             </tr>
           </thead>
@@ -100,7 +101,7 @@ const SubscriptionType = () => {
                 <td className="py-4 px-6 text-center">
                   <FaEdit
                     onClick={() => handleViewUser(subscriber.id)}
-                    className="w-[24px] h-[24px] text-blue-950 cursor-pointer"
+                    className="w-[24px] h-[24px] text-[#317828] cursor-pointer"
                   />
                 </td>
                 <td className="py-4 px-6 text-center">
@@ -134,8 +135,8 @@ const SubscriptionType = () => {
                 key={page}
                 className={`px-4 py-2 mx-1 font-medium border border-[#67676780] text-[#000000] rounded-md ${
                   currentPage === page + 1
-                    ? "bg-[#1E3A8A] text-white"
-                    : "hover:bg-[#8ab9e9] hover:text-white"
+                    ? "bg-[#317828] text-white"
+                    : "hover:bg-[#8ae9a7] hover:text-white"
                 }`}
                 onClick={() => handlePageClick(page + 1)}
               >

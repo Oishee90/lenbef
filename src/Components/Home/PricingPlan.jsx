@@ -80,7 +80,7 @@ const PricingPlan = () => {
             key={idx}
             className={`bg-white rounded-[3.5rem] flex flex-col justify-between border ${
               plan.isHighlighted
-                ? "border-4 border-[#317828] shadow-2xl lg:h-[600px] relative top-[-40px]"
+                ? "border-4 border-[#317828] shadow-2xl lg:h-[600px] relative lg:top-[-40px]"
                 : "lg:h-[487.56px]"
             }`}
           >

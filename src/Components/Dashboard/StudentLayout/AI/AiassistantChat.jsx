@@ -83,9 +83,10 @@ const AiassistantChat = () => {
     }
   };
   const handleTapToStop = () => {
-    if (recognitionRef.current) {
-      setIsListening(false); // This will prevent auto-restart
+    if (recognitionRef.current && isListening) {
       recognitionRef.current.stop();
+      setIsListening(false);
+      console.log("Stopped listening");
     }
   };
 
@@ -327,11 +328,11 @@ const AiassistantChat = () => {
                   <p className="text-gray-600 mb-4 ">
                     Click the microphone to start speaking
                   </p>
-                  <div className="flex flex-col  font-bold justify-center items-center mt-9">
-                    <button
-                      className="text-black px-4 py-7 rounded"
-                      onClick={handleTapToSpeak}
-                    >
+                  <div
+                    className="flex flex-col  font-bold justify-center items-center mt-9"
+                    onClick={handleTapToSpeak}
+                  >
+                    <button className="text-black px-4 py-7 rounded">
                       <img src={speaker} alt="mic" className="" />
                       <span className="mt-7"> </span>
                     </button>
@@ -366,11 +367,11 @@ const AiassistantChat = () => {
                     </button>
                   </div>
 
-                  <div
-                    className="flex justify-center items-center mt-9"
-                    onClick={handleTapToStop}
-                  >
-                    <button className="text-white px-4 py-2 rounded-lg bg-[#e23636]">
+                  <div className="flex justify-center items-center mt-[5.5rem]">
+                    <button
+                      onClick={handleTapToStop}
+                      className="text-white px-4 py-2 rounded-lg bg-[#e23636]"
+                    >
                       Stop Listening
                     </button>
                   </div>

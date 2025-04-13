@@ -3,6 +3,7 @@ import JoditEditor from "jodit-react";
 import Swal from "sweetalert2";
 import { GrUpdate } from "react-icons/gr";
 import { IoSave } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
 
 const Terms = () => {
   const [content, setContent] = useState(`
@@ -182,7 +183,7 @@ const Terms = () => {
       confirmButtonText: "OK",
     });
   };
-
+  const { t } = useTranslation();
   return (
     <div className="h-full">
       <div className="w-full  p-6 ">
@@ -190,15 +191,15 @@ const Terms = () => {
           <JoditEditor
             ref={editor}
             value={content}
-            onChange={(newContent) => setContent(newContent)}
+            onblur={(newContent) => setContent(newContent)}
             config={config} // Apply the custom config
           />
         </div>
         <div className="flex justify-end items-center gap-2  p-4 ">
           <div onClick={handleUpdate}>
-            <button className="px-3 py-2 flex items-center gap-3 poppins font-medium rounded-xl bg-[#1E3A8A] text-white ">
+            <button className="px-3 py-2 flex items-center gap-3 poppins font-medium rounded-xl bg-[#317828] text-white ">
               {" "}
-              <GrUpdate /> Update
+              <GrUpdate /> {t("adminPannel.Update")}
             </button>
           </div>
         </div>

@@ -15,7 +15,7 @@ import ContactForm from "./ContactForm";
 const Home = () => {
   return (
     <div className="bg-white h-full">
-      <div className="pt-5">
+      <div className="pt-5 p-4">
         <Navbar></Navbar>
         <Banner></Banner>
         <Milestones></Milestones>

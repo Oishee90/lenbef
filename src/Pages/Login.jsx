@@ -37,7 +37,7 @@ const Login = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(" ");
-  const [role, setRole] = useState("Student");
+  const [role, setRole] = useState("");
   const [grade, setGrade] = useState("");
 
   const [showOptions, setShowOptions] = useState(false);
@@ -56,6 +56,16 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Submitting login form");
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    let role = "user"; // default
+
+    if (email === "admin@gmail.com") {
+      role = "Admin";
+    } else if (email === "student@gmail.com") {
+      role = "Student";
+    }
 
     const dummyAccessToken = "dummy_token_123456789"; // Dummy Access Token
 
