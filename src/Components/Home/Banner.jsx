@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import banner from "../../assets/banner.png";
+import { NavLink } from "react-router-dom";
 
 const Banner = () => {
   const { t } = useTranslation();
@@ -16,11 +17,14 @@ const Banner = () => {
           <p className="roboto text-lg lg:text-2xl text-[#0F172A] font-normal leading-[160%] ">
             {t("banner.description")}
           </p>
-          <div>
-            <button className="py-4 px-6 bg-[#317828] text-white roboto rounded-2xl font-bold">
-              {t("banner.signup")}
-            </button>
-          </div>
+          <NavLink to="/Signup">
+            {" "}
+            <div>
+              <button className="py-4 px-6 bg-[#317828] text-white roboto rounded-2xl font-bold">
+                {t("banner.signup")}
+              </button>
+            </div>{" "}
+          </NavLink>
         </div>
         {/* img */}
         <div className="lg:w-1/2 w-full ">

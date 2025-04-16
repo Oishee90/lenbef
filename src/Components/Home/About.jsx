@@ -6,6 +6,7 @@ import about2 from "../../assets/about-2.png";
 import about3 from "../../assets/about-4.png";
 import { useTranslation } from "react-i18next";
 import { MdOutlineArrowForward } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 
 const About = () => {
   const { t } = useTranslation();
@@ -34,11 +35,11 @@ const About = () => {
         <p className="text-[#1E1E1E] font-normal text-[17.79px] poppins mt-5 ">
           {t("about.paragraph5")} {/* Translated paragraph 5 */}
         </p>
-        <div className="mt-6">
-          <button className="py-4 px-6 bg-[#317828] text-white roboto rounded-2xl font-bold flex items-center gap-3">
-            {t("about.joinNow")} <MdOutlineArrowForward />
+        <NavLink to="/login"> <div className="mt-6">
+      <button className="py-4 px-6 bg-[#317828] text-white roboto rounded-2xl font-bold flex items-center gap-3">
+            {t("about.joinNow")} <MdOutlineArrowForward /> 
           </button>
-        </div>
+        </div> </NavLink> 
       </div>
       {/* img */}
       <div className="lg:w-1/2 w-full flex-col flex gap-7">
