@@ -17,11 +17,13 @@ const Navbar = () => {
     { name: t("navbar.resources"), id: "Resources" },
     { name: t("navbar.contact"), id: "Contact us" },
   ];
+  const [user, setUser] = useState(null);
   const [userRole, setUserRole] = useState(null);
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
-    if (storedUser?.role) {
+    if (storedUser) {
+      setUser(storedUser);
       setUserRole(storedUser.role);
     }
   }, []);
@@ -44,24 +46,10 @@ const Navbar = () => {
   }, []);
 
   const navigate = useNavigate();
-  const user = JSON.parse(localStorage.getItem("user"));
 
   const handleScroll = (id) => {
-    if (id === "home") {
-      navigate("/");
-    }
-    if (id === "Resources") {
-      navigate("/resources");
-    }
-    if (id === "Contact us") {
-      navigate("/contactus");
-    }
-    if (id === "about") {
-      navigate("/about");
-    } else {
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-      setActiveSection(id);
-    }
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setActiveSection(id);
   };
   const handleDashboardRedirect = () => {
     console.log("oishe");
@@ -138,29 +126,21 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-            {userRole ? (
-              <button
-                onClick={handleDashboardRedirect}
-                className="montserrat md:text-base rounded-3xl bg-[#317828] px-3 py-2 sm:px-5 sm:py-2.5 text-sm font-medium text-white"
+
+            <>
+              <NavLink
+                to="/login"
+                className="montserrat md:text-base px-5 py-2.5 text-sm font-medium text-[#000000]"
               >
-                {t("navbar.dashboard")}
-              </button>
-            ) : (
-              <>
-                <NavLink
-                  to="/login"
-                  className="montserrat md:text-base px-5 py-2.5 text-sm font-medium text-[#000000]"
-                >
-                  {t("navbar.login")}
-                </NavLink>
-                <NavLink
-                  to="/signUp"
-                  className="montserrat md:text-base rounded-3xl bg-[#317828] px-3 py-2 sm:px-5 sm:py-2.5 text-sm font-medium text-[#FFE500]"
-                >
-                  {t("navbar.signup")}
-                </NavLink>
-              </>
-            )}
+                {t("navbar.login")}
+              </NavLink>
+              <NavLink
+                to="/signUp"
+                className="montserrat md:text-base rounded-3xl bg-[#317828] px-3 py-2 sm:px-5 sm:py-2.5 text-sm font-medium text-[#FFE500]"
+              >
+                {t("navbar.signup")}
+              </NavLink>
+            </>
           </div>
 
           {/*  Mobile Menu Button */}
@@ -222,34 +202,18 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="mt-4 flex flex-col gap-4">
-            {userRole ? (
-              <button
-                onClick={() => {
-                  handleDashboardRedirect();
-                  setIsOpen(false);
-                }}
-                className="montserrat md:text-base px-5 py-2.5 text-sm font-medium text-white bg-[#317828] rounded-full"
-              >
-                {t("navbar.dashboard")}
-              </button>
-            ) : (
-              <>
-                <NavLink
-                  to="/login"
-                  className="montserrat md:text-base px-5 py-2.5 text-sm font-medium text-[#000000]"
-                >
-                  {t("navbar.login")}
-                </NavLink>
-                <div className="w-full justify-center">
-                  <NavLink
-                    to="/signUp"
-                    className="montserrat md:text-base w-full text-center rounded-3xl bg-gradient-to-b from-[#00B2F7] via-[#1E3A8A] to-[#080F24] px-3 py-2 sm:px-5 sm:py-2.5 text-sm font-medium text-white"
-                  >
-                    {t("navbar.signup")}
-                  </NavLink>
-                </div>
-              </>
-            )}
+            <NavLink
+              to="/login"
+              className="montserrat md:text-base px-5 py-2.5 text-sm font-medium text-[#000000]"
+            >
+              {t("navbar.login")}
+            </NavLink>
+            <NavLink
+              to="/signUp"
+              className="montserrat md:text-base rounded-3xl bg-[#317828] px-3 py-2 sm:px-5 sm:py-2.5 text-sm font-medium text-[#FFE500]"
+            >
+              {t("navbar.signup")}
+            </NavLink>
           </div>
         </div>
       )}

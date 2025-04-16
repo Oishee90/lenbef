@@ -5,7 +5,10 @@ import { useTranslation } from "react-i18next";
 const ContactForm = () => {
   const { t } = useTranslation();
   return (
-    <div className="h-[800px] container mx-auto  flex items-center justify-center bg-[#317828] px-4 rounded-2xl">
+    <div
+      id="Contact us"
+      className="h-[800px] container mx-auto  flex items-center justify-center bg-[#317828] px-4 rounded-2xl"
+    >
       <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 w-full max-w-4xl">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 lg:text-6xl">
           <span className="text-[#CBB702] poppins">{t("contact.title1")}</span>{" "}

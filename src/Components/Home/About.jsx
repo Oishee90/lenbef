@@ -10,7 +10,7 @@ import { MdOutlineArrowForward } from "react-icons/md";
 const About = () => {
   const { t } = useTranslation();
   return (
-    <div className="container mx-auto pt-24 lg:pt-32 pb-24 flex lg:flex-row flex-col gap-10 lg:gap-24 items-center lg:items-start ">
+    <div id="about" className="container mx-auto pt-24 lg:pt-32 pb-24 flex lg:flex-row flex-col gap-10 lg:gap-24 items-center lg:items-start ">
       {/* content */}
       <div className="lg:w-1/2 w-full  ">
         <h1 className="text-[#317828] font-semibold lg:text-[26px] text-2xl md:text-4xl poppins w-full  lg:text-left text-center ">
