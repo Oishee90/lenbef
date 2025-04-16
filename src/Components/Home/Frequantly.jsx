@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 const FAQSection = () => {
   const { t } = useTranslation();
   return (
-    <section id="Resources" className="bg-white dark:bg-gray-900 mt-28">
+    <section id="Resources" className="bg-white mt-28">
       <div className="container  px-6 py-10 mx-auto">
         <h1 className="text-3xl font-extrabold roboto text-center text-[#317828] lg:text-6xl dark:text-white">
           {t("faq.title")}

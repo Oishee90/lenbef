@@ -41,9 +41,11 @@ const Footer = () => {
             {t("footer.title")}
           </h1>
           <div className="mt-9 flex justify-center ">
-            <button className="py-4 px-6 bg-[#CBB702] text-white kumbh-sans font-normal uppercase rounded-full">
-              {t("footer.getStarted")}
-            </button>
+            <NavLink to="/login">
+              <button className="py-4 px-6 bg-[#CBB702] text-white kumbh-sans font-normal uppercase rounded-full">
+                {t("footer.getStarted")}
+              </button>
+            </NavLink>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-12  justify-items-center">
