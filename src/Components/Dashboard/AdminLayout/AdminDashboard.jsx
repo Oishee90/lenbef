@@ -238,7 +238,7 @@ const AdminDashboard = () => {
         </div>
         <div className="p-6 text-center  bg-[#EAF2EA] border rounded-xl shadow-xl">
           <h3 className="text-xl font-normal text-[#000000] roboto">
-            {t("adminPannel.NewUSers")}
+            {t("adminPannel.NewUsers")}
           </h3>
           <p className="font-semibold text-[#1C1C1C] text-4xl mt-5">156</p>
         </div>
