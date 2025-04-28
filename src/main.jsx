@@ -30,6 +30,8 @@ import AiassistantChat from "./Components/Dashboard/StudentLayout/AI/Aiassistant
 import EnglishProficiency from "./Components/Dashboard/StudentLayout/English/EnglishProficiency";
 import GeneratedArticle from "./Components/Dashboard/StudentLayout/Article/GeneratedArticle";
 import Subscription from "./Components/Dashboard/AdminLayout/Subscription/Subscription";
+import { Provider } from "react-redux";
+import store from "./Redux/store.js";
 // Get role from localStorage
 const role = getRole();
 console.log("User data in main.jsx:", role);
@@ -156,6 +158,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
